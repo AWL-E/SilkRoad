@@ -27,7 +27,7 @@ namespace algorithm {
 
 using asdk::generic::AWLEStatus;
 
-using AlgorithmMap = std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>;
+// using AlgorithmMap = std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>;
 
 class AlgorithmManager  {
 public:
@@ -38,7 +38,7 @@ public:
     void addAlgorithm(const std::string& topic, std::shared_ptr<AlgorithmInterface> algorithm);
 
 private: 
-    std::shared_ptr<AlgorithmMap> algos;
+    std::shared_ptr<std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>> algos;
 };
 
 } // namespace algorithm

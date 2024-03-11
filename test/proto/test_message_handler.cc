@@ -14,3 +14,29 @@ TEST(TestMessageHandler, basic) {
   proto::MyMessageHandler messageHandler;
   ASSERT_EQ(messageHandler.getName(), "test");
 }
+
+TEST(TestMessageHandler, encode) {
+  myproto::MyMessage msgToEncode;
+  msgToEncode.set_id(1);
+  msgToEncode.set_name("to encode");
+
+  std::string encoded;
+
+  ASSERT_TRUE(msgToEncode.SerializeToString(&encoded));
+  
+}
+TEST(TestMessageHandler, decode) {
+  myproto::MyMessage msgToEncode;
+  msgToEncode.set_id(1);
+  msgToEncode.set_name("to encode");
+
+  std::string encoded;
+
+  msgToEncode.SerializeToString(&encoded);
+
+  myproto::MyMessage msgToDecode;
+  ASSERT_TRUE(msgToDecode.ParseFromString(encoded));
+  ASSERT_EQ(msgToDecode.id(), 1);
+  ASSERT_EQ(msgToDecode.name(), "to encode");
+  
+}
