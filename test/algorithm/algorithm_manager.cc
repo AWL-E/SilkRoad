@@ -35,5 +35,5 @@ public:
 };
 
 TEST(AlgorithmManager, Instanciate) {  
-  algorithm::AlgorithmManager manager();
+//algos = std::make_shared<std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>>();  // algorithm::AlgorithmManager manager();
 }

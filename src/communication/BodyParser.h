@@ -14,19 +14,29 @@
  * limitations under the License.
  */
 
-#include "AlgorithmManager.h"
+#ifndef _SILKROAD_COMMUNICATION_BODYPARSER_H_
+#define _SILKROAD_COMMUNICATION_BODYPARSER_H_
 
-namespace algorithm {
-  
-AlgorithmManager::AlgorithmManager() {
-algos = std::make_shared<std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>>();
-}
+#include <functional>
+#include <memory>
+#include <string>
+#include <iostream>
 
-void AlgorithmManager::dispatch(std::string topic, std::string payload, AWLEStatus &status) {}
+#include "../asdk/generic/ErrorCodes.h"
 
-void AlgorithmManager::addAlgorithm(const std::string& topic, std::shared_ptr<AlgorithmInterface> algorithm) {
-    algos->emplace(topic, std::list<std::shared_ptr<AlgorithmInterface>>{});
-    algos->at(topic).push_back(algorithm);
+namespace communication {
+
+using asdk::generic::AWLEStatus;
+
+class BodyParser  {
+public:
+  explicit BodyParser();
+  ~BodyParser() = default;
+
+  void parse(const std::string &payload, std::string& output, AWLEStatus &status);
+
 };
 
-} // namespace
+} // namespace communication
+
+#endif // _SILKROAD_COMMUNICATION_BODYPARSER_H_

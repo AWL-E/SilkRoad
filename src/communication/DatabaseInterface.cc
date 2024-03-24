@@ -14,19 +14,10 @@
  * limitations under the License.
  */
 
-#include "AlgorithmManager.h"
+#include "DatabaseInterface.h"
 
-namespace algorithm {
+namespace communication {
   
-AlgorithmManager::AlgorithmManager() {
-algos = std::make_shared<std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>>();
-}
+DatabaseInterface::DatabaseInterface() {}
 
-void AlgorithmManager::dispatch(std::string topic, std::string payload, AWLEStatus &status) {}
-
-void AlgorithmManager::addAlgorithm(const std::string& topic, std::shared_ptr<AlgorithmInterface> algorithm) {
-    algos->emplace(topic, std::list<std::shared_ptr<AlgorithmInterface>>{});
-    algos->at(topic).push_back(algorithm);
-};
-
-} // namespace
+} // namespace asdk::initializer

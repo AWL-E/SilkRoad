@@ -37,13 +37,16 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     libssl-dev \
     ninja-build=1.10.0-1build1 \
     ccache=3.7.7-1 \
+    curl \
     g++-10 \
     gdb=9.2-0ubuntu1~20.04.1 \
     libgtest-dev=1.10.0-2 \
     cmake \
     clang-format \
     protobuf-compiler \
-    libprotobuf-dev
+    libprotobuf-dev \
+    libcurl4-openssl-dev \
+    libjsoncpp-dev
 
 # Logger library
 RUN apt-get install -y --no-install-recommends git; mkdir -p lib; cd lib; \
