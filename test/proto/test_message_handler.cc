@@ -4,6 +4,8 @@
 #include <memory>
 
 #include "proto/message_handler.h"
+#include <google/protobuf/util/json_util.h>
+#include <google/protobuf/util/message_differencer.h>
 
 using namespace std;
 
@@ -41,67 +43,38 @@ TEST(TestMessageHandler, DecodeFromBinary) {
   
 }
 
+TEST(TestMessageHandler, DecodeFromJSON) {
+  myproto::MyMessage decodedMessage;
+
+  std::string json = "{\"id\":1,\"name\":\"test\"}";
+
+  google::protobuf::util::JsonParseOptions options;
+  options.ignore_unknown_fields = true;
+  
+  google::protobuf::util::JsonStringToMessage(json, &decodedMessage, options);
+
+  EXPECT_EQ(decodedMessage.id(), 1);
+  EXPECT_EQ(decodedMessage.name(), "test");
+}
+
 TEST(TestMessageHandler, EncodeToJSON) {
+  std::string encodingResult;
+
   myproto::MyMessage msgToEncode;
   msgToEncode.set_id(1);
   msgToEncode.set_name("to encode");
+  google::protobuf::util::JsonPrintOptions encodingOptions;
+  encodingOptions.add_whitespace = true;
+  encodingOptions.always_print_primitive_fields = true;
+  encodingOptions.preserve_proto_field_names = true;
+  google::protobuf::util::MessageToJsonString(msgToEncode, &encodingResult, encodingOptions);
 
-  std::string encoded;
 
-  ASSERT_TRUE(msgToEncode.SerializeToString(&encoded));
-  
+  google::protobuf::util::JsonParseOptions decodingOptions;
+  decodingOptions.ignore_unknown_fields = true;
+  myproto::MyMessage decodedMessage;
+
+  google::protobuf::util::JsonStringToMessage(encodingResult, &decodedMessage, decodingOptions);
+
+  EXPECT_TRUE(google::protobuf::util::MessageDifferencer::Equals(decodedMessage, msgToEncode));
 }
-
-TEST(TestMessageHandler, DecodeFromJSON) {
-  
-}
-
-
-/**
-TEST_F(BasicProtoGtest, SerializeToJsonAndBackAgain) {
-  // Movie PBUF message
-  Movie startMovie;
-
-  struct timeval tv;
-  gettimeofday(&tv, NULL);
-
-  ::google::protobuf::Timestamp* timestamp = new
-  ::google::protobuf::Timestamp();
-  timestamp->set_seconds(tv.tv_sec);
-  timestamp->set_nanos(tv.tv_usec * 1000);
-
-  startMovie.set_allocated_start_time(timestamp);
-  startMovie.set_movie_name("my happy movie");
-
-  std::string serialized = startMovie.SerializeAsString();
-  std::string json_string;
-
-  // Create a TypeResolver used to resolve protobuf message types
-  google::protobuf::util::JsonOptions options;
-  options.always_print_primitive_fields = true;
-  std::unique_ptr<google::protobuf::util::TypeResolver>
-  resolver(google::protobuf::util::NewTypeResolverForDescriptorPool(
-  "type.googleapis.com",
-  google::protobuf::DescriptorPool::generated_pool()));
-
-  // Assert we can find the Movie type in the resolver
-  Type type;
-  ASSERT_TRUE(resolver->ResolveMessageType(
-  "type.googleapis.com/movie.pbuf.Movie", &type).ok());
-
-  auto status = google::protobuf::util::BinaryToJsonString(resolver.get(),
-  "type.googleapis.com/movie.pbuf.Movie", serialized, &json_string, options);
-  // std::cout << "~~~~~~~ bin str\n" << serialized << std::endl;
-  std::cout << "*******\n" << json_string << std::endl;
-
-  // Turn JSON into serialized protobuf message
-  std::string movieBin;
-  google::protobuf::util::JsonToBinaryString(resolver.get(),
-  "type.googleapis.com/movie.pbuf.Movie", json_string, &movieBin);
-
-  Movie startMovie2;
-  startMovie2.ParseFromString(movieBin);
-
-  EXPECT_EQ(startMovie.movie_name(), startMovie2.movie_name());
-  EXPECT_EQ(startMovie.start_time(), startMovie2.start_time());
-}*/
