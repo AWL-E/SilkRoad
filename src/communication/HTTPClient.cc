@@ -87,8 +87,6 @@ namespace communication {
             status.set(asdk::generic::ErrorCodes::UNKNOWN);
             status.setDescription(curl_easy_strerror(res));
         }
-
-        fprintf(stderr, "POST: %s", response.body.c_str());
     }
 
     return response;
