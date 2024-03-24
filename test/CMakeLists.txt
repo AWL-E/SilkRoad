@@ -39,6 +39,8 @@ include_directories(${GTEST_INCLUDE_DIRS})
 set(TEST_APPLICATION_SRC 
     "proto/test_message_handler.cc"
     "algorithm/algorithm_manager.cc"
+    "algorithm/power_exchange_detection.cc"
+    "algorithm/charge_estimation.cc"
 )
 
 add_executable(basic_test_application "main.cc" ${TEST_APPLICATION_SRC})

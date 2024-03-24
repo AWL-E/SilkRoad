@@ -44,6 +44,7 @@ SET(APPLICATION_SOURCE_FILES
     proto/message_handler.cc
     util/logging.cc
     algorithm/PowerExchangeDetection.cc
+    algorithm/ChargeEstimation.cc
 )
 
 SET(APPLICATION_INCLUDE_DIRS
