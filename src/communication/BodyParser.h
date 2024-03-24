@@ -14,43 +14,29 @@
  * limitations under the License.
  */
 
-#ifndef _SILKROAD_COMMUNICATION_HTTPCLIENT_H_
-#define _SILKROAD_COMMUNICATION_HTTPCLIENT_H_
+#ifndef _SILKROAD_COMMUNICATION_BODYPARSER_H_
+#define _SILKROAD_COMMUNICATION_BODYPARSER_H_
 
 #include <functional>
 #include <memory>
 #include <string>
+#include <iostream>
 
 #include "../asdk/generic/ErrorCodes.h"
-#include "./BodyParser.h"
-#include <iostream>
-#include <curl/curl.h>
 
 namespace communication {
 
-struct HTTPResponse {
-    long code; // HTTP status code
-    std::string body; // Response body
-};
-
 using asdk::generic::AWLEStatus;
 
-class HTTPClient  {
+class BodyParser  {
 public:
-    HTTPClient(std::shared_ptr<BodyParser> f_bodyParser);
-    ~HTTPClient();
+  explicit BodyParser();
+  ~BodyParser() = default;
 
-    HTTPResponse get(const std::string& url, AWLEStatus& status);
-    HTTPResponse post(const std::string& url, const std::string& data, AWLEStatus& status);
-
-private:
-  static size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output);
-  CURL *curl;
-
-  std::shared_ptr<BodyParser> bodyParser;
+  void parse(const std::string &payload, std::string& output, AWLEStatus &status);
 
 };
 
 } // namespace communication
 
-#endif // _SILKROAD_COMMUNICATION_HTTPCLIENT_H_
+#endif // _SILKROAD_COMMUNICATION_BODYPARSER_H_

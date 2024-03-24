@@ -17,7 +17,7 @@
 #include "HTTPClient.h"
 
 namespace communication { 
-    HTTPClient::HTTPClient() {
+    HTTPClient::HTTPClient(std::shared_ptr<BodyParser> f_bodyParser) : bodyParser(f_bodyParser){
         curl_global_init(CURL_GLOBAL_ALL);
         curl = curl_easy_init();
     }
@@ -58,7 +58,18 @@ namespace communication {
     HTTPResponse response;
 
     if (curl) {
+        // URL
         curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
+        
+        // Header
+        struct curl_slist *headers = NULL;
+        headers = curl_slist_append(headers, "Accept: application/json");
+        headers = curl_slist_append(headers, "Content-Type: application/json");
+        headers = curl_slist_append(headers, "charset: utf-8");
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+
+        // Data
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, HTTPClient::WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response.body);
@@ -76,6 +87,8 @@ namespace communication {
             status.set(asdk::generic::ErrorCodes::UNKNOWN);
             status.setDescription(curl_easy_strerror(res));
         }
+
+        fprintf(stderr, "POST: %s", response.body.c_str());
     }
 
     return response;

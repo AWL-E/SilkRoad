@@ -27,12 +27,13 @@ ENDIF()
 ## Include external dependencies
 find_package(Protobuf REQUIRED)
 find_package(CURL REQUIRED) 
+find_package(jsoncpp REQUIRED)
 
 # Include CURL
 
 include_directories(${CURL_INCLUDE_DIR})
+include_directories(${JSONCPP_INCLUDE_DIRS})
 include_directories(${PROTOBUF_INCLUDE_DIRS})
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 
@@ -44,11 +45,16 @@ protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS proto/example.proto)
 SET(APPLICATION_SOURCE_FILES 
     algorithm/AlgorithmInterface.cc
     algorithm/AlgorithmManager.cc
+    
     asdk/generic/ErrorCodes.cc
+    
     communication/CommunicationInterface.cc
     communication/HTTPClient.cc
     communication/DatabaseInterface.cc
+    communication/BodyParser.cc
+
     proto/message_handler.cc
+
     util/logging.cc
 )
 
@@ -61,7 +67,7 @@ find_package (glog 0.5.0 REQUIRED)
 # Compile library (to reuse with tests)
 add_library(application_lib SHARED ${APPLICATION_SOURCE_FILES} ${PROTO_SRCS} ${PROTO_HDRS})
 target_include_directories(application_lib PUBLIC ${APPLICATION_INCLUDE_DIRS})
-target_link_libraries(application_lib glog::glog ${PROTOBUF_LIBRARIES} CURL::libcurl)
+target_link_libraries(application_lib glog::glog ${PROTOBUF_LIBRARIES} CURL::libcurl jsoncpp_lib)
 
 # Compile Application
 add_executable(application "main.cc")

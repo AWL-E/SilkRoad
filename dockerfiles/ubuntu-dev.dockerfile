@@ -45,7 +45,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     clang-format \
     protobuf-compiler \
     libprotobuf-dev \
-    libcurl4-openssl-dev
+    libcurl4-openssl-dev \
+    libjsoncpp-dev
 
 # Logger library
 RUN apt-get install -y --no-install-recommends git; mkdir -p lib; cd lib; \
