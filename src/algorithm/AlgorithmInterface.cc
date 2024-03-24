@@ -20,4 +20,4 @@ namespace algorithm {
   
 AlgorithmInterface::AlgorithmInterface() {}
 
-} // namespace asdk::initializer
+} 

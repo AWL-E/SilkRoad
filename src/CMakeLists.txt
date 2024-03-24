@@ -43,6 +43,7 @@ SET(APPLICATION_SOURCE_FILES
     communication/CommunicationInterface.cc
     proto/message_handler.cc
     util/logging.cc
+    algorithm/PowerExchangeDetection.cc
 )
 
 SET(APPLICATION_INCLUDE_DIRS
