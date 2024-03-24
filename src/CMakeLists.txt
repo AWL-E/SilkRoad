@@ -47,6 +47,7 @@ SET(APPLICATION_SOURCE_FILES
     asdk/generic/ErrorCodes.cc
     communication/CommunicationInterface.cc
     communication/HTTPClient.cc
+    communication/DatabaseInterface.cc
     proto/message_handler.cc
     util/logging.cc
 )

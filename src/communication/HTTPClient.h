@@ -23,16 +23,29 @@
 
 #include "../asdk/generic/ErrorCodes.h"
 
+#include <iostream>
+#include <curl/curl.h>
+
 namespace communication {
+
+struct HTTPResponse {
+    long code; // HTTP status code
+    std::string body; // Response body
+};
 
 using asdk::generic::AWLEStatus;
 
 class HTTPClient  {
 public:
-  explicit HTTPClient();
-  ~HTTPClient() = default;
+    HTTPClient();
+    ~HTTPClient();
 
-  int test();
+    HTTPResponse get(const std::string& url, AWLEStatus& status);
+    HTTPResponse post(const std::string& url, const std::string& data, AWLEStatus& status);
+
+private:
+  static size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output);
+  CURL *curl;
 };
 
 } // namespace communication

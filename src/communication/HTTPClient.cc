@@ -15,45 +15,75 @@
  */
 
 #include "HTTPClient.h"
-#include <curl/curl.h>
 
-namespace communication {
-  
-HTTPClient::HTTPClient() {}
+namespace communication { 
+    HTTPClient::HTTPClient() {
+        curl_global_init(CURL_GLOBAL_ALL);
+        curl = curl_easy_init();
+    }
 
-int HTTPClient::test()
-{
-  CURL *curl;
-  CURLcode res;
- 
-  curl_global_init(CURL_GLOBAL_DEFAULT);
- 
-  curl = curl_easy_init();
-  if(curl) {
-    curl_easy_setopt(curl, CURLOPT_URL, "https://google.com/");
-    /*
-     * If the site you are connecting to uses a different host name that what
-     * they have mentioned in their server certificate's commonName (or
-     * subjectAltName) fields, libcurl refuses to connect. You can skip this
-     * check, but it makes the connection insecure.
-     */
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-    
-    /* cache the CA cert bundle in memory for a week */
-    //curl_easy_setopt(curl, CURLOPT_CA_CACHE_TIMEOUT, 604800L);
-    /* Perform the request, res gets the return code */
-    res = curl_easy_perform(curl);
-    /* Check for errors */
-    if(res != CURLE_OK)
-      fprintf(stderr, "curl_easy_perform() failed: %s\n",
-              curl_easy_strerror(res));
-    /* always cleanup */
-    curl_easy_cleanup(curl);
-  }
+    HTTPClient::~HTTPClient() {
+        curl_easy_cleanup(curl);
+        curl_global_cleanup();
+    }
 
-  curl_global_cleanup();
+    HTTPResponse HTTPClient::get(const std::string& url, AWLEStatus& status) {
+        HTTPResponse response;
+        long httpCode;
 
-  return 0;
+        if (curl) {
+            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, HTTPClient::WriteCallback);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA,  &response.body);
+
+            CURLcode res = curl_easy_perform(curl);
+
+            if (res == CURLE_OK) {
+              curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response.code);
+
+              if(response.code >= 400) {
+                  status.set(asdk::generic::ErrorCodes::UNKNOWN);
+                  status.setDescription(std::to_string(httpCode));
+              }
+            } else {
+                status.set(asdk::generic::ErrorCodes::UNKNOWN);
+                status.setDescription(curl_easy_strerror(res));
+            }
+        }
+
+        return response;
+    }
+
+    HTTPResponse HTTPClient::post(const std::string& url, const std::string& data, AWLEStatus& status) {
+    HTTPResponse response;
+
+    if (curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, HTTPClient::WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response.body);
+
+        CURLcode res = curl_easy_perform(curl);
+
+        if (res == CURLE_OK) {
+            curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response.code);
+
+            if (response.code >= 400) {
+                status.set(asdk::generic::ErrorCodes::UNKNOWN);
+                status.setDescription(std::to_string(response.code));
+            }
+        } else {
+            status.set(asdk::generic::ErrorCodes::UNKNOWN);
+            status.setDescription(curl_easy_strerror(res));
+        }
+    }
+
+    return response;
 }
 
+    size_t HTTPClient::WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output) {
+      size_t total_size = size * nmemb;
+      output->append((char*)contents, total_size);
+      return total_size;
+    }
 } // namespace asdk::initializer
