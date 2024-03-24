@@ -42,6 +42,8 @@ set(TEST_APPLICATION_SRC
     "communication/test_https_client.cc"
     "communication/test_database_interface.cc" 
     "communication/test_body_parser.cc"
+    "algorithm/power_exchange_detection.cc"
+    "algorithm/charge_estimation.cc"
 )
 
 add_executable(basic_test_application "main.cc" ${TEST_APPLICATION_SRC})
