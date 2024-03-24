@@ -24,12 +24,17 @@ IF(NOT DEFINED APP_NAME)
     message(STATUS "Hack to provide default variable, APP_NAME to prevent an error message.")
 ENDIF()
 
-## PROTO SECTION ## 
+## Include external dependencies
 find_package(Protobuf REQUIRED)
+find_package(CURL REQUIRED) 
 
-# Include generated protobuf files
+# Include CURL
+
+include_directories(${CURL_INCLUDE_DIR})
 include_directories(${PROTOBUF_INCLUDE_DIRS})
+
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
 
 # Generate C++ files from the .proto file
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS proto/example.proto)
@@ -41,6 +46,7 @@ SET(APPLICATION_SOURCE_FILES
     algorithm/AlgorithmManager.cc
     asdk/generic/ErrorCodes.cc
     communication/CommunicationInterface.cc
+    communication/HTTPClient.cc
     proto/message_handler.cc
     util/logging.cc
 )
@@ -54,7 +60,7 @@ find_package (glog 0.5.0 REQUIRED)
 # Compile library (to reuse with tests)
 add_library(application_lib SHARED ${APPLICATION_SOURCE_FILES} ${PROTO_SRCS} ${PROTO_HDRS})
 target_include_directories(application_lib PUBLIC ${APPLICATION_INCLUDE_DIRS})
-target_link_libraries(application_lib glog::glog ${PROTOBUF_LIBRARIES})
+target_link_libraries(application_lib glog::glog ${PROTOBUF_LIBRARIES} CURL::libcurl)
 
 # Compile Application
 add_executable(application "main.cc")
