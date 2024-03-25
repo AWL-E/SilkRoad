@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 
-#include "DatabaseInterface.h"
+#include "BodyParserInterface.h"
 
-namespace communication {
-  
-DatabaseInterface::DatabaseInterface() {}
-
+namespace communication::parsing {  
+    BodyParserInterface::BodyParserInterface() {}
 } // namespace asdk::initializer

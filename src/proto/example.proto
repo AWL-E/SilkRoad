@@ -6,3 +6,6 @@ message MyMessage {
   int32 id = 1;
   string name = 2;
 }
+message batteryMessage {
+  float batteryPercentage = 1;
+}

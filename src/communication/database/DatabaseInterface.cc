@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-#include "AlgorithmInterface.h"
+#include "DatabaseInterface.h"
 
-namespace algorithm {
+namespace communication::database {
   
-AlgorithmInterface::AlgorithmInterface() {}
+DatabaseInterface::DatabaseInterface() {}
 
-} 
+} // namespace asdk::initializer

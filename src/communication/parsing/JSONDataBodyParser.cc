@@ -14,10 +14,23 @@
  * limitations under the License.
  */
 
-#include "AlgorithmInterface.h"
+#include "JSONDataBodyParser.h"
 
-namespace algorithm {
+#include <json/json.h>
+
+namespace communication::parsing {
   
-AlgorithmInterface::AlgorithmInterface() {}
+    JSONDataBodyParser::JSONDataBodyParser() {}
 
-} 
+      void JSONDataBodyParser::parse(const std::string &payload, std::string& output, AWLEStatus &status) { 
+            Json::Value root;
+            Json::Reader reader;
+            
+            if (reader.parse(payload, root)) {
+                output = root["data"].asString();
+            } else {
+                status.set(asdk::generic::ErrorCodes::UNKNOWN);
+                status.setDescription("Failed to parse JSON");
+            }
+      }
+} // namespace asdk::initializer

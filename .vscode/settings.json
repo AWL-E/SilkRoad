@@ -63,5 +63,6 @@
         "cinttypes": "cpp",
         "variant": "cpp",
         "list": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

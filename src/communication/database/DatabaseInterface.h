@@ -21,9 +21,9 @@
 #include <memory>
 #include <string>
 
-#include "../asdk/generic/ErrorCodes.h"
+#include "../../asdk/generic/ErrorCodes.h"
 
-namespace communication {
+namespace communication::database {
 
 using asdk::generic::AWLEStatus;
 

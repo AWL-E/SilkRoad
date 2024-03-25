@@ -14,10 +14,30 @@
  * limitations under the License.
  */
 
-#include "AlgorithmInterface.h"
+#ifndef _SILKROAD_COMMUNICATION_BODYPARSERINTERFACE_H_
+#define _SILKROAD_COMMUNICATION_BODYPARSERINTERFACE_H_
 
-namespace algorithm {
-  
-AlgorithmInterface::AlgorithmInterface() {}
+#include <functional>
+#include <memory>
+#include <string>
+#include <iostream>
 
-} 
+#include "../../asdk/generic/ErrorCodes.h"
+
+namespace communication::parsing {
+
+using asdk::generic::AWLEStatus;
+
+class BodyParserInterface  {
+public:
+
+  explicit BodyParserInterface();
+  virtual ~BodyParserInterface() = default;
+
+  virtual void parse(const std::string &payload, std::string& output, AWLEStatus &status) = 0;
+
+};
+
+} // namespace communication
+
+#endif // _SILKROAD_COMMUNICATION_BODYPARSERINTERFACE_H_

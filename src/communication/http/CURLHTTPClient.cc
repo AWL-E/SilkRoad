@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-#include "HTTPClient.h"
+#include "CURLHTTPClient.h"
 
 namespace communication { 
-    HTTPClient::HTTPClient(std::shared_ptr<BodyParser> f_bodyParser) : bodyParser(f_bodyParser){
+    CURLHTTPClient::CURLHTTPClient(std::shared_ptr<communication::parsing::BodyParserInterface> f_bodyParser) : HTTPClientInterface(f_bodyParser){
         curl_global_init(CURL_GLOBAL_ALL);
         curl = curl_easy_init();
     }
 
-    HTTPClient::~HTTPClient() {
+    CURLHTTPClient::~CURLHTTPClient() {
         curl_easy_cleanup(curl);
         curl_global_cleanup();
     }
 
-    HTTPResponse HTTPClient::get(const std::string& url, AWLEStatus& status) {
+    HTTPResponse CURLHTTPClient::get(const std::string& url, AWLEStatus& status) {
         HTTPResponse response;
         long httpCode;
 
         if (curl) {
             curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, HTTPClient::WriteCallback);
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, CURLHTTPClient::WriteCallback);
             curl_easy_setopt(curl, CURLOPT_WRITEDATA,  &response.body);
 
             CURLcode res = curl_easy_perform(curl);
@@ -54,7 +54,7 @@ namespace communication {
         return response;
     }
 
-    HTTPResponse HTTPClient::post(const std::string& url, const std::string& data, AWLEStatus& status) {
+    HTTPResponse CURLHTTPClient::post(const std::string& url, const std::string& data, AWLEStatus& status) {
     HTTPResponse response;
 
     if (curl) {
@@ -71,7 +71,7 @@ namespace communication {
 
         // Data
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data.c_str());
-        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, HTTPClient::WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, CURLHTTPClient::WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response.body);
 
         CURLcode res = curl_easy_perform(curl);
@@ -92,7 +92,7 @@ namespace communication {
     return response;
 }
 
-    size_t HTTPClient::WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output) {
+    size_t CURLHTTPClient::WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output) {
       size_t total_size = size * nmemb;
       output->append((char*)contents, total_size);
       return total_size;
