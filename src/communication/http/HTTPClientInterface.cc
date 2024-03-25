@@ -14,26 +14,8 @@
  * limitations under the License.
  */
 
-#include "BodyParser.h"
+#include "HTTPClientInterface.h"
 
-#include <json/json.h>
-
-namespace communication {
-  
-    BodyParser::BodyParser() {}
-
-      void BodyParser::parse(const std::string &payload, std::string& output, AWLEStatus &status) {
-            
-            Json::Value root;
-            Json::Reader reader;
-            bool parsingSuccessful = reader.parse(payload, root);
-            
-            if (parsingSuccessful) {
-                output = root["data"].asString();
-            } else {
-                status.set(asdk::generic::ErrorCodes::UNKNOWN);
-                status.setDescription("Failed to parse JSON");
-            }
-      }
-
+namespace communication { 
+    HTTPClientInterface::HTTPClientInterface(std::shared_ptr<communication::parsing::BodyParserInterface> f_bodyParser) : bodyParser(f_bodyParser){}
 } // namespace asdk::initializer

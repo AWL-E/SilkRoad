@@ -14,19 +14,14 @@ void ChargeEstimation::prepare(AWLEStatus &status) {
     return;
   }
   lastBatteryCheckpoint = batteryInfo.back().lastBatteryCheckpoint;
-
-  // execute(status);
 }
 
 void ChargeEstimation::execute(AWLEStatus &status) {
-
    remainingChargePercentage = calculateCharge();
-  // complete(status);
 }
 void ChargeEstimation::complete(AWLEStatus &status) {
     myproto::batteryMessage msg;
     msg.set_batterypercentage(remainingChargePercentage);
-    std::cout << "Remaining charge percentage : " << remainingChargePercentage << std::endl;
 }
 
 float ChargeEstimation::calculateCharge() {

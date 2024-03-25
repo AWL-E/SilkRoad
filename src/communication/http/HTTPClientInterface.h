@@ -14,43 +14,39 @@
  * limitations under the License.
  */
 
-#ifndef _SILKROAD_COMMUNICATION_HTTPCLIENT_H_
-#define _SILKROAD_COMMUNICATION_HTTPCLIENT_H_
+#ifndef _SILKROAD_COMMUNICATION_HTTPCLIENTINTERFACE_H_
+#define _SILKROAD_COMMUNICATION_HTTPCLIENTINTERFACE_H_
 
 #include <functional>
 #include <memory>
 #include <string>
-
-#include "../asdk/generic/ErrorCodes.h"
-#include "./BodyParser.h"
 #include <iostream>
 #include <curl/curl.h>
+
+#include "../../asdk/generic/ErrorCodes.h"
+#include "./../parsing/BodyParserInterface.h"
 
 namespace communication {
 
 struct HTTPResponse {
-    long code; // HTTP status code
-    std::string body; // Response body
+    uint16_t code;
+    std::string body;
 };
 
 using asdk::generic::AWLEStatus;
 
-class HTTPClient  {
+class HTTPClientInterface  {
 public:
-    HTTPClient(std::shared_ptr<BodyParser> f_bodyParser);
-    ~HTTPClient();
+    HTTPClientInterface(std::shared_ptr<communication::parsing::BodyParserInterface> f_bodyParser);
+    virtual ~HTTPClientInterface() = default;
 
-    HTTPResponse get(const std::string& url, AWLEStatus& status);
-    HTTPResponse post(const std::string& url, const std::string& data, AWLEStatus& status);
+    virtual HTTPResponse get(const std::string& url, AWLEStatus& status) = 0;
+    virtual HTTPResponse post(const std::string& url, const std::string& data, AWLEStatus& status) = 0;
 
-private:
-  static size_t WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output);
-  CURL *curl;
-
-  std::shared_ptr<BodyParser> bodyParser;
-
+protected:
+  std::shared_ptr<communication::parsing::BodyParserInterface> bodyParser;
 };
 
 } // namespace communication
 
-#endif // _SILKROAD_COMMUNICATION_HTTPCLIENT_H_
+#endif // _SILKROAD_COMMUNICATION_HTTPCLIENTINTERFACE_H_

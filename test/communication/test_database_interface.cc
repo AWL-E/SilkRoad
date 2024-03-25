@@ -3,10 +3,10 @@
 #include <iostream>
 #include <memory>
 
-#include "../../src/communication/DatabaseInterface.h"
+#include "../../src/communication/database/DatabaseInterface.h"
 
 using namespace std;
-using namespace communication;
+using namespace communication::database;
 using namespace asdk::generic;
 
 TEST(TestDatabaseInterface, basic) {

@@ -22,18 +22,19 @@
 #include <string>
 #include <iostream>
 
-#include "../asdk/generic/ErrorCodes.h"
+#include "../../asdk/generic/ErrorCodes.h"
+#include "./BodyParserInterface.h"
 
-namespace communication {
+namespace communication::parsing {
 
 using asdk::generic::AWLEStatus;
 
-class BodyParser  {
+class JSONDataBodyParser: public BodyParserInterface {
 public:
-  explicit BodyParser();
-  ~BodyParser() = default;
+  explicit JSONDataBodyParser();
+  ~JSONDataBodyParser() = default;
 
-  void parse(const std::string &payload, std::string& output, AWLEStatus &status);
+  void parse(const std::string &payload, std::string& output, AWLEStatus &status) override;
 
 };
 

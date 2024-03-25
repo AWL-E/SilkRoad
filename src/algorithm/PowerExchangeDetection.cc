@@ -14,8 +14,6 @@ void PowerExchangeDetection::prepare(AWLEStatus &status) {
     status.set(asdk::generic::ErrorCodes::GENERIC);
     return;
   }
-
-  //execute(status);
 }
 
 void PowerExchangeDetection::execute(AWLEStatus &status) {
@@ -34,13 +32,9 @@ void PowerExchangeDetection::execute(AWLEStatus &status) {
   if (closestId == -1) {
     status.set(asdk::generic::ErrorCodes::INVALID_ARGUMENT);
   }
-
-  //complete(status);
 }
 
 void PowerExchangeDetection::complete(AWLEStatus &status) {
-
-    std::cout<< "Closest Rx device id : "<<getDeviceID(closestId).id<<std::endl;
 
 }
 

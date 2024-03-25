@@ -45,19 +45,20 @@ protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS proto/example.proto)
 SET(APPLICATION_SOURCE_FILES 
     algorithm/AlgorithmInterface.cc
     algorithm/AlgorithmManager.cc
+    algorithm/PowerExchangeDetection.cc
+    algorithm/ChargeEstimation.cc
     
     asdk/generic/ErrorCodes.cc
     
-    communication/CommunicationInterface.cc
-    communication/HTTPClient.cc
-    communication/DatabaseInterface.cc
-    communication/BodyParser.cc
+    communication/database/DatabaseInterface.cc
+    communication/http/CURLHTTPClient.cc
+    communication/http/HTTPClientInterface.cc
+    communication/parsing/BodyParserInterface.cc
+    communication/parsing/JSONDataBodyParser.cc
 
     proto/message_handler.cc
 
     util/logging.cc
-    algorithm/PowerExchangeDetection.cc
-    algorithm/ChargeEstimation.cc
 )
 
 SET(APPLICATION_INCLUDE_DIRS
