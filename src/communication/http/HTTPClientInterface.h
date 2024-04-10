@@ -41,6 +41,8 @@ public:
     virtual ~HTTPClientInterface() = default;
 
     virtual HTTPResponse get(const std::string& url, AWLEStatus& status) = 0;
+    virtual HTTPResponse get(const std::string& url, const std::string& data, AWLEStatus& status) = 0;
+    
     virtual HTTPResponse post(const std::string& url, const std::string& data, AWLEStatus& status) = 0;
 
 protected:

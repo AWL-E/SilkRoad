@@ -54,6 +54,48 @@ namespace communication {
         return response;
     }
 
+    HTTPResponse CURLHTTPClient::get(const std::string& url, const std::string& data, AWLEStatus& status) {
+        HTTPResponse response;
+        long httpCode;
+
+        if (curl) {
+            // URL
+            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, CURLHTTPClient::WriteCallback);
+            curl_easy_setopt(curl, CURLOPT_WRITEDATA,  &response.body);
+
+            // Header
+            struct curl_slist *headers = NULL;
+            headers = curl_slist_append(headers, "Accept: application/json");
+            headers = curl_slist_append(headers, "Content-Type: application/json");
+            headers = curl_slist_append(headers, "charset: utf-8");
+            curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+
+            // Hack to get with json data
+            curl_easy_setopt(curl, CURLOPT_POST, 1L);
+            curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE_LARGE, data.size());
+            curl_easy_setopt(curl, CURLOPT_COPYPOSTFIELDS, data.c_str());
+            curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "GET");
+
+            CURLcode res = curl_easy_perform(curl);
+
+            if (res == CURLE_OK) {
+              curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &response.code);
+
+              if(response.code >= 400) {
+                  status.set(asdk::generic::ErrorCodes::UNKNOWN);
+                  status.setDescription(std::to_string(httpCode));
+              }
+            } else {
+                status.set(asdk::generic::ErrorCodes::UNKNOWN);
+                status.setDescription(curl_easy_strerror(res));
+            }
+        }
+
+        return response;
+    }
+
+
     HTTPResponse CURLHTTPClient::post(const std::string& url, const std::string& data, AWLEStatus& status) {
     HTTPResponse response;
 

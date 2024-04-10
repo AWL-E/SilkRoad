@@ -38,6 +38,7 @@ public:
     ~CURLHTTPClient();
 
     HTTPResponse get(const std::string& url, AWLEStatus& status) override;
+    HTTPResponse get(const std::string& url, const std::string& data, AWLEStatus& status) override;
     HTTPResponse post(const std::string& url, const std::string& data, AWLEStatus& status) override;
 
 private:
