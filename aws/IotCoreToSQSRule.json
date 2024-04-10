@@ -1,0 +1,15 @@
+{
+    "sql": "SELECT * FROM 'v1/#'",
+    "ruleDisabled": false,
+    "actions": [
+      {
+        "sqs": {
+          "roleArn": "arn:aws:iam::123456789012:role/IoTRuleSQSRole",
+          "queueUrl": "https://sqs.us-east-1.amazonaws.com/123456789012/production-silkroad-queue"
+        }
+      }
+    ],
+    "awsIotSqlVersion": "2016-03-23",
+    "ruleName": "ForwardToSQSRule",
+    "topicRulePayloadVersion": "3"
+  }
