@@ -26,8 +26,9 @@ ENDIF()
 
 ## Include external dependencies
 find_package(Protobuf REQUIRED)
-find_package(CURL REQUIRED) 
 find_package(jsoncpp REQUIRED)
+find_package(CURL REQUIRED) 
+#find_package(aws-lambda-runtime)
 
 # Include CURL
 
@@ -36,9 +37,11 @@ include_directories(${JSONCPP_INCLUDE_DIRS})
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
+# List variable for help
+message("   --> PROTOBUF INCLUDE: ${Protobuf_INCLUDE_DIRS}")
 
 # Generate C++ files from the .proto file
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS proto/example.proto)
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS proto/ProtoMessages.proto)
 
 ## PROTO SECTION END ## 
 
@@ -50,13 +53,12 @@ SET(APPLICATION_SOURCE_FILES
     
     asdk/generic/ErrorCodes.cc
     
+    communication/OpenSearchClient.cc
     communication/database/DatabaseInterface.cc
     communication/http/CURLHTTPClient.cc
     communication/http/HTTPClientInterface.cc
     communication/parsing/BodyParserInterface.cc
     communication/parsing/JSONDataBodyParser.cc
-
-    proto/message_handler.cc
 
     util/logging.cc
 )
@@ -74,6 +76,6 @@ target_link_libraries(application_lib glog::glog ${PROTOBUF_LIBRARIES} CURL::lib
 
 # Compile Application
 add_executable(application "main.cc")
-target_link_libraries(application application_lib)
+#target_link_libraries(application application_lib AWS::aws-lambda-runtime)
 
 install(TARGETS application)

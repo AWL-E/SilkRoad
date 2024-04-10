@@ -3,32 +3,15 @@
 #include <iostream>
 #include <memory>
 
-#include "proto/message_handler.h"
+#include "../../build/src/ProtoMessages.pb.h"
+
 #include <google/protobuf/util/json_util.h>
 #include <google/protobuf/util/message_differencer.h>
 
 using namespace std;
 
-// Next idea is to type erase the Drawer and specify which drawer we want to
-// instantiate ie: Drawer drawer = std::make_unique<OPenGL>();
-// drawer.drawAllShapes(shapes);
-TEST(TestMessageHandler, basic) {
-  proto::MyMessageHandler messageHandler;
-  ASSERT_EQ(messageHandler.getName(), "test");
-}
-
-TEST(TestMessageHandler, EncodeToBinary) {
-  myproto::MyMessage msgToEncode;
-  msgToEncode.set_id(1);
-  msgToEncode.set_name("to encode");
-
-  std::string encoded;
-
-  ASSERT_TRUE(msgToEncode.SerializeToString(&encoded));
-  
-}
 TEST(TestMessageHandler, DecodeFromBinary) {
-  myproto::MyMessage msgToEncode;
+  ProtoMessages::TestMessage msgToEncode;
   msgToEncode.set_id(1);
   msgToEncode.set_name("to encode");
 
@@ -36,7 +19,7 @@ TEST(TestMessageHandler, DecodeFromBinary) {
 
   msgToEncode.SerializeToString(&encoded);
 
-  myproto::MyMessage msgToDecode;
+  ProtoMessages::TestMessage msgToDecode;
   ASSERT_TRUE(msgToDecode.ParseFromString(encoded));
   ASSERT_EQ(msgToDecode.id(), 1);
   ASSERT_EQ(msgToDecode.name(), "to encode");
@@ -44,7 +27,7 @@ TEST(TestMessageHandler, DecodeFromBinary) {
 }
 
 TEST(TestMessageHandler, DecodeFromJSON) {
-  myproto::MyMessage decodedMessage;
+  ProtoMessages::TestMessage decodedMessage;
 
   std::string json = "{\"id\":1,\"name\":\"test\"}";
 
@@ -60,7 +43,7 @@ TEST(TestMessageHandler, DecodeFromJSON) {
 TEST(TestMessageHandler, EncodeToJSON) {
   std::string encodingResult;
 
-  myproto::MyMessage msgToEncode;
+  ProtoMessages::TestMessage msgToEncode;
   msgToEncode.set_id(1);
   msgToEncode.set_name("to encode");
   google::protobuf::util::JsonPrintOptions encodingOptions;
@@ -72,7 +55,7 @@ TEST(TestMessageHandler, EncodeToJSON) {
 
   google::protobuf::util::JsonParseOptions decodingOptions;
   decodingOptions.ignore_unknown_fields = true;
-  myproto::MyMessage decodedMessage;
+  ProtoMessages::TestMessage decodedMessage;
 
   google::protobuf::util::JsonStringToMessage(encodingResult, &decodedMessage, decodingOptions);
 

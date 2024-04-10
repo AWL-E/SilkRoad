@@ -1,8 +1,13 @@
 syntax = "proto3";
 
-package main;
+package ProtoMessages;
 
-message batteryMessage {
+message TestMessage {
+  int32 id = 1;
+  string name = 2;
+}
+
+message BatteryMessage {
   float batteryPercentage = 1;
 }
 

@@ -26,6 +26,7 @@ COPY ${SCRIPT_LOC} /build
 WORKDIR /build
 
 RUN apt-get update
+RUN apt-get upgrade -y --no-install-recommends
 
 # every other dependencies that comes from ubuntu directly
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -45,10 +46,23 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     clang-format \
     protobuf-compiler \
     libprotobuf-dev \
+    libjsoncpp-dev \
     libcurl4-openssl-dev \
-    libjsoncpp-dev
+    libssl-dev \
+    git \
+    zip
 
 # Logger library
-RUN apt-get install -y --no-install-recommends git; mkdir -p lib; cd lib; \
+RUN mkdir -p lib; cd lib; \
     git clone https://github.com/google/glog.git; cd glog; git checkout v0.5.0;\
     mkdir -p build; cd build; cmake ..; make; make install; cd ../..; rm -rf glog
+
+# Building Amazon Lambda runtime
+RUN git clone https://github.com/awslabs/aws-lambda-cpp-runtime.git; \
+    cd aws-lambda-cpp-runtime; \
+    mkdir build; \
+    cd build; \
+    cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=~/install \
+    make; \
+    make install; \
+    cd ../..;

@@ -37,8 +37,6 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 set(TEST_APPLICATION_SRC 
-    "proto/test_message_handler.cc"
-
     "algorithm/algorithm_manager.cc"
     "algorithm/power_exchange_detection.cc"
     "algorithm/charge_estimation.cc"
@@ -46,6 +44,8 @@ set(TEST_APPLICATION_SRC
     "communication/test_database_interface.cc" 
     "communication/test_json_body_parser.cc"
     "communication/test_open_search_client.cc"
+    
+    "proto/test_message_handler.cc"
 )
 
 add_executable(basic_test_application "main.cc" ${TEST_APPLICATION_SRC})

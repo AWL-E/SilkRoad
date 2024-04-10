@@ -1,9 +1,21 @@
-#include <iostream>
-#include <memory>
-#include "util/logging.h"
+/**
+ #include <aws/lambda-runtime/runtime.h>
 
-using namespace std;
+using namespace aws::lambda_runtime;
 
-int main() {
-  LOG(INFO) << "Drawing many circles and squares.";
+static invocation_response my_handler(invocation_request const& req)
+{
+    if (req.payload.length() > 42) {
+        return invocation_response::failure("error message here",
+                                            "error type here");
+    }
+
+    return invocation_response::success("json payload here" ,
+                                        "application/json");
+}
+*/
+int main()
+{
+    //run_handler(my_handler);
+    return 0;
 }

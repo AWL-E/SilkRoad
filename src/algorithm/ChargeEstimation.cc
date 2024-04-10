@@ -1,5 +1,5 @@
 #include "ChargeEstimation.h"
-#include "../proto/message_handler.h"
+#include "../../build/src/ProtoMessages.pb.h"
 
 namespace algorithm {
 
@@ -20,7 +20,7 @@ void ChargeEstimation::execute(AWLEStatus &status) {
    remainingChargePercentage = calculateCharge();
 }
 void ChargeEstimation::complete(AWLEStatus &status) {
-    myproto::batteryMessage msg;
+    ProtoMessages::BatteryMessage msg;
     msg.set_batterypercentage(remainingChargePercentage);
 }
 
