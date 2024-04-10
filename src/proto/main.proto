@@ -1,0 +1,43 @@
+message IndexBulkRequest {
+    string _index = 1;
+    string _id = 2;
+}
+
+message Notification {
+    string type = 1;
+    string timestamp = 2;
+    string deviceId = 3;
+}
+
+message DeviceFirmwareUpdateNotification {
+    string version = 1;
+    string timestamp = 2;
+    string deviceId = 3;
+}
+
+message RxDeviceStatus {
+    string deviceId = 1;
+    bool isCharging = 2; 
+    int32 percentCharged = 3; 
+    string timestamp = 4;
+}
+
+message DeviceRegistration {
+    string deviceId = 1;
+    string deviceType = 2;
+    string manufacturerModel = 3;
+    string timestamp = 4;
+}
+
+message RxDevicesPowerReading {
+  string deviceId = 1;
+  float currentAmp = 2;
+  float voltage = 3;
+  string timestamp = 4;
+}
+
+message DeviceChargingEvent {
+    string deviceId = 1;
+    string deviceType = 2;
+    string event = 3;
+}
