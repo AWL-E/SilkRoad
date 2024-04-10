@@ -2,6 +2,7 @@ import json
 import random
 from datetime import datetime
 
+# Génère une fausse alerte de mise à jour
 def generate_data(version, deviceId):
     data = {
         "version": f'1.{version}.0',
@@ -12,8 +13,10 @@ def generate_data(version, deviceId):
     }
     return data
 
+# Génère une multitude de faux messages dans un fichier JSON
+# Ce fichier peut être donné à OpenSearch
 def generate_bulk_request(num_device, outputJson):
-    
+
     with open(outputJson, 'w') as jsonfile:
         dataId = 0
         for deviceId in range(num_device):
@@ -29,5 +32,5 @@ def generate_bulk_request(num_device, outputJson):
             jsonfile.write(json.dumps(generate_data(nb_update + 1, deviceId)) + '\n')
 
 if __name__ == "__main__":
-    num_requests = 1000  # Change this to the number of requests you want in the bulk request
+    num_requests = 1000
     generate_bulk_request(num_requests, "./updates.json")

@@ -2,6 +2,7 @@ import json
 import random
 from datetime import datetime
 
+# Génère une fausse notification
 def generate_notification():
     notification = {
         "type": str(random.choice(['Battery below 20%', 'Battery below 10%', 'Battery is fully charged', 'Out of perimeter'])),
@@ -12,20 +13,22 @@ def generate_notification():
     }
     return notification
 
+# Génère une multitude de fausses notifications dans un fichier JSON
+# Ce fichier peut être donné à OpenSearch
 def generate_bulk_request(num_requests, outputJson):
     with open(outputJson, 'w') as jsonfile:
         for dataId in range(num_requests):
 
-            # Construct the JSON document
             json_doc = {
                 "index": {
                     "_index": "notification_2024_04",
-                    "_id": dataId  # Use timestamp as unique id
+                    "_id": dataId
                 }
             } 
             jsonfile.write(json.dumps(json_doc) + '\n')
             jsonfile.write(json.dumps(generate_notification()) + '\n')
-
+            
+# Modifier les paramètres
 if __name__ == "__main__":
-    num_requests = 10000  # Change this to the number of requests you want in the bulk request
+    num_requests = 10000
     generate_bulk_request(num_requests, "notification.json")

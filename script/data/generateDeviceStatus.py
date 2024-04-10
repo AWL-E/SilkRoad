@@ -2,15 +2,8 @@ import json
 import random
 from datetime import datetime
 
+# Génère un faux statut d'appareil
 def generate_status():
-    """
-        message DeviceStatus {
-            string deviceId = 1;
-            bool isCharging = 2;
-            uint32 percentCharged = 3;
-            string timestamp = 4;
-        }
-    """
     status = {
         "deviceId": str(random.randint(0, 1000)),
         "isCharging": random.choice([True, False]),
@@ -21,20 +14,22 @@ def generate_status():
     }
     return status
 
+# Génère une multitude de faux messages dans un fichier JSON
+# Ce fichier peut être donné à OpenSearch
 def generate_bulk_request(num_requests, outputJson):
     with open(outputJson, 'w') as jsonfile:
         for dataId in range(num_requests):
 
-            # Construct the JSON document
             json_doc = {
                 "index": {
                     "_index": "device_status_202404",
-                    "_id": dataId  # Use timestamp as unique id
+                    "_id": dataId 
                 }
             } 
             jsonfile.write(json.dumps(json_doc) + '\n')
             jsonfile.write(json.dumps(generate_status()) + '\n')
 
+# Modifier les paramètres
 if __name__ == "__main__":
-    num_requests = 2000  # Change this to the number of requests you want in the bulk request
+    num_requests = 2000 
     generate_bulk_request(num_requests, "device_status.json")

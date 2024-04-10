@@ -2,16 +2,9 @@ import json
 import random
 from datetime import datetime
 
+# Génère un faux message d'enregistrement
 def generate_registration(deviceId):
-
-    """
-        message DeviceManufactureEvent {
-            string deviceId = 1;
-            string deviceType = 2;
-            string manufacturerModel = 3;
-            uint32 timestamp = 4;
-        }
-    """
+    # Distribution inégale
     deviceType = str(random.choice(['Transmitter', 'Transmitter', 'Transmitter', 'Transmitter', 'Receiver', 'Receiver', 'Receiver', 'Receiver', 'Receiver', 'Receiver']))
     registration = {
         "deviceId": str(deviceId),
@@ -23,20 +16,22 @@ def generate_registration(deviceId):
     }
     return registration
 
+# Génère une multitude de faux messages dans un fichier JSON
+# Ce fichier peut être donné à OpenSearch
 def generate_bulk_request(num_requests, outputJson):
     with open(outputJson, 'w') as jsonfile:
         for dataId in range(num_requests):
 
-            # Construct the JSON document
             json_doc = {
                 "index": {
                     "_index": "device_registration_2024_03",
-                    "_id": dataId  # Use timestamp as unique id
+                    "_id": dataId 
                 }
             } 
             jsonfile.write(json.dumps(json_doc) + '\n')
             jsonfile.write(json.dumps(generate_registration(dataId)) + '\n')
 
+# Modifier les paramètres
 if __name__ == "__main__":
-    num_requests = 1000  # Change this to the number of requests you want in the bulk request
+    num_requests = 1000
     generate_bulk_request(num_requests, "registration.json")
