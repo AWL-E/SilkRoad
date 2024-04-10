@@ -3,6 +3,10 @@ import json
 
 """
 curl -XPOST -u 'admin:Awleonship!1' 'https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.ca-central-1.es.amazonaws.com/_bulk' --data-binary @notification.json -H 'Content-Type: application/json'
+curl -XPOST -u 'admin:Awleonship!1' 'https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.ca-central-1.es.amazonaws.com/_bulk' --data-binary @device_status.json -H 'Content-Type: application/json'
+curl -XPOST -u 'admin:Awleonship!1' 'https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.ca-central-1.es.amazonaws.com/_bulk' --data-binary @notification.json -H 'Content-Type: application/json'
+curl -XPOST -u 'admin:Awleonship!1' 'https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.ca-central-1.es.amazonaws.com/_bulk' --data-binary @registration.json -H 'Content-Type: application/json'
+
 """
 def csv_to_json(csv_file, output_file):
     id = 0

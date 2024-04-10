@@ -4,8 +4,8 @@ from datetime import datetime
 
 def generate_notification():
     notification = {
-        "type": str(random.randint(0, 5)),
-        "timestamp": datetime(year=2023, month=random.randint(1, 12), day=random.randint(1, 28), 
+        "type": str(random.choice(['Battery below 20%', 'Battery below 10%', 'Battery is fully charged', 'Out of perimeter'])),
+        "timestamp": datetime(year=2024, month=4, day=random.randint(1, 2), 
                               hour=random.randint(0, 23), minute=random.randint(0, 59), 
                               second=random.randint(0, 59)).strftime('%Y-%m-%dT%H:%M:%S'),
         "deviceId": str(random.randint(0, 100))
@@ -19,7 +19,7 @@ def generate_bulk_request(num_requests, outputJson):
             # Construct the JSON document
             json_doc = {
                 "index": {
-                    "_index": "location_20240317",
+                    "_index": "notification_2024_04",
                     "_id": dataId  # Use timestamp as unique id
                 }
             } 
