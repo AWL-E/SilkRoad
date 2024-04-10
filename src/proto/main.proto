@@ -1,3 +1,11 @@
+syntax = "proto3";
+
+package main;
+
+message batteryMessage {
+  float batteryPercentage = 1;
+}
+
 message IndexBulkRequest {
     string _index = 1;
     string _id = 2;
