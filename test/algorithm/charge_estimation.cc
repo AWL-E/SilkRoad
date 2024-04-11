@@ -1,10 +1,12 @@
 #include <gtest/gtest.h>
 
 #include "../../src/algorithm/ChargeEstimation.h"
+#include "../helpers/FakeOpenSearchClient.h"
 
 TEST(ChargeEstimation, Prepare) {
   asdk::generic::AWLEStatus status;
-  algorithm::ChargeEstimation chargeEstimation;
+  auto searchEngine = std::make_shared<test::FakeOpenSearch>();
+  algorithm::ChargeEstimation chargeEstimation(searchEngine);
 
   chargeEstimation.prepare(status);
 
@@ -12,7 +14,8 @@ TEST(ChargeEstimation, Prepare) {
 }
 TEST(ChargeEstimation, Execute) {
   asdk::generic::AWLEStatus status;
-  algorithm::ChargeEstimation chargeEstimation;
+  auto searchEngine = std::make_shared<test::FakeOpenSearch>();
+  algorithm::ChargeEstimation chargeEstimation(searchEngine);
 
   chargeEstimation.prepare(status);
   chargeEstimation.execute(status);
@@ -22,7 +25,8 @@ TEST(ChargeEstimation, Execute) {
 
 TEST(ChargeEstimation, Complete) {
   asdk::generic::AWLEStatus status;
-  algorithm::ChargeEstimation chargeEstimation;
+  auto searchEngine = std::make_shared<test::FakeOpenSearch>();
+  algorithm::ChargeEstimation chargeEstimation(searchEngine);
 
   chargeEstimation.prepare(status);
   chargeEstimation.execute(status);

@@ -27,12 +27,14 @@ namespace algorithm {
 
 using asdk::generic::AWLEStatus;
 
-// using AlgorithmMap = std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>;
-
+/**
+ * Cette classe génère des algorithmes en fonction d'un topic MQTT.
+ * Il s'occupe de générer les données nécessaire à partir de la requête.
+*/
 class AlgorithmManager  {
 public:
     explicit AlgorithmManager();
-    virtual ~AlgorithmManager() = default;
+    ~AlgorithmManager() = default;
 
     void dispatch(std::string topic, std::string payload, AWLEStatus &status);
     void addAlgorithm(const std::string& topic, std::shared_ptr<AlgorithmInterface> algorithm);

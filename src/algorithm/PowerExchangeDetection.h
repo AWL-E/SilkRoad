@@ -7,10 +7,10 @@ namespace algorithm {
 
 using asdk::generic::AWLEStatus;
 
-class DatabaseManager {
+class DatabaseManager2 {
 public:
-  DatabaseManager() = default;
-  ~DatabaseManager() = default;
+  DatabaseManager2() = default;
+  ~DatabaseManager2() = default;
 
   struct DevicesInfo {
     uint16_t id;
@@ -27,11 +27,13 @@ public:
   }
 };
 
+/** 
+ * Algorithme qui permet d'identifier quel RX est chargé par quel TX
+ */
 class PowerExchangeDetection : public AlgorithmInterface {
 
 public:
-  PowerExchangeDetection(/*std::unique_ptr<DatabaseManager> db_f*/) =
-      default; //: db(std::move(db_f)) {};
+  explicit PowerExchangeDetection(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine);
   ~PowerExchangeDetection() = default;
 
   void prepare(AWLEStatus &status) override;
@@ -39,14 +41,14 @@ public:
   void complete(AWLEStatus &status) override;
 
 private:
-  float calculateDistance(const DatabaseManager::DevicesInfo &tx,
-                          const DatabaseManager::DevicesInfo &rx);
-  DatabaseManager::DevicesInfo getDeviceID(uint16_t id);
+  float calculateDistance(const DatabaseManager2::DevicesInfo &tx,
+                          const DatabaseManager2::DevicesInfo &rx);
+  DatabaseManager2::DevicesInfo getDeviceID(uint16_t id);
 
-  std::unique_ptr<DatabaseManager> db;
-  std::vector<DatabaseManager::DevicesInfo> rxDevicesInfo;
+  std::unique_ptr<DatabaseManager2> db;
+  std::vector<DatabaseManager2::DevicesInfo> rxDevicesInfo;
 
-  DatabaseManager::DevicesInfo txInputInfo = {4, 32.22, 43.65};
+  DatabaseManager2::DevicesInfo txInputInfo = {4, 32.22, 43.65};
   int32_t closestId = -1;
 };
 

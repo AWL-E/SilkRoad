@@ -19,7 +19,7 @@
 namespace algorithm {
   
 AlgorithmManager::AlgorithmManager() {
-algos = std::make_shared<std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>>();
+    algos = std::make_shared<std::map<std::string, std::list<std::shared_ptr<AlgorithmInterface>>>>();
 }
 
 void AlgorithmManager::dispatch(std::string topic, std::string payload, AWLEStatus &status) {}

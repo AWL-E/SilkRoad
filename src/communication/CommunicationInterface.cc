@@ -18,6 +18,10 @@
 
 namespace communication {
   
-CommunicationInterface::CommunicationInterface() {}
+CommunicationInterface::CommunicationInterface(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine, std::shared_ptr<algorithm::AlgorithmManager> f_algoManager):
+    searchEngine(f_searchEngine), algoManager(f_algoManager) {}
+
+bool CommunicationInterface::handleIncomingMessage(const std::string &payload, AWLEStatus &status) {return false;}
+
 
 } // namespace asdk::initializer

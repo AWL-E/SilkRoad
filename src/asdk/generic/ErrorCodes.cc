@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+/**
+ * Cette classe est une classe appartenant à AWL-E
+ * Auteur: Félix Champagne-Lapointe
+*/
 #include "ErrorCodes.h"
 
 namespace asdk::generic {

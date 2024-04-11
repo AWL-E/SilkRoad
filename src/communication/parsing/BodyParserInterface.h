@@ -28,6 +28,9 @@ namespace communication::parsing {
 
 using asdk::generic::AWLEStatus;
 
+/** 
+ * Interface qui permet de trier le contenu d'une requête sérialisée
+ */
 class BodyParserInterface  {
 public:
 

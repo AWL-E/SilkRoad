@@ -1,10 +1,12 @@
 #include <gtest/gtest.h>
 
 #include "../../src/algorithm/PowerExchangeDetection.h"
+#include "../helpers/FakeOpenSearchClient.h"
 
 TEST(PowerExchangeDetection, Prepare) {
   asdk::generic::AWLEStatus status;
-  algorithm::PowerExchangeDetection powerExchangeDetection;
+  auto searchEngine = std::make_shared<test::FakeOpenSearch>();
+  algorithm::PowerExchangeDetection powerExchangeDetection(searchEngine);
 
   powerExchangeDetection.prepare(status);
 
@@ -13,7 +15,8 @@ TEST(PowerExchangeDetection, Prepare) {
 
 TEST(PowerExchangeDetection, Execute) {
   asdk::generic::AWLEStatus status;
-  algorithm::PowerExchangeDetection powerExchangeDetection;
+  auto searchEngine = std::make_shared<test::FakeOpenSearch>();
+  algorithm::PowerExchangeDetection powerExchangeDetection(searchEngine);
 
   powerExchangeDetection.prepare(status);
   powerExchangeDetection.execute(status);
@@ -22,7 +25,8 @@ TEST(PowerExchangeDetection, Execute) {
 }
 TEST(PowerExchangeDetection, Complete) {
   asdk::generic::AWLEStatus status;
-  algorithm::PowerExchangeDetection powerExchangeDetection;
+  auto searchEngine = std::make_shared<test::FakeOpenSearch>();
+  algorithm::PowerExchangeDetection powerExchangeDetection(searchEngine);
 
   powerExchangeDetection.prepare(status);
   powerExchangeDetection.execute(status);

@@ -3,6 +3,8 @@
 
 namespace algorithm {
 
+ChargeEstimation::ChargeEstimation(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine): AlgorithmInterface(f_searchEngine) {}
+
 void ChargeEstimation::prepare(AWLEStatus &status) {
 
   db = std::make_unique<DatabaseManager>();

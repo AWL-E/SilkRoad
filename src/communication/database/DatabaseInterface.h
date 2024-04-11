@@ -40,6 +40,9 @@ struct QueryParams {
         : index(_index), fields(_fields), query(_query), size(_size), from(_from) {}
 };
 
+/**
+ * Classe brouillon qui permettra de communiquer avec DynamoDB
+*/
 class DatabaseInterface  {
 public:
     explicit DatabaseInterface();

@@ -18,6 +18,6 @@
 
 namespace algorithm {
   
-AlgorithmInterface::AlgorithmInterface() {}
+AlgorithmInterface::AlgorithmInterface(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine) : searchEngine(f_searchEngine) {}
 
 } 

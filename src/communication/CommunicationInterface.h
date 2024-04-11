@@ -22,19 +22,25 @@
 #include <string>
 
 #include "../asdk/generic/ErrorCodes.h"
-
+#include "../communication/OpenSearchInterface.h"
+#include "../algorithm/AlgorithmManager.h"
 namespace communication {
 
 using asdk::generic::AWLEStatus;
 
+/**
+ * Interface qui reçoit des messages entrant dans le cadriciel 
+ */
 class CommunicationInterface  {
 public:
-  explicit CommunicationInterface();
-  virtual ~CommunicationInterface() = default;
+  explicit CommunicationInterface(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine, std::shared_ptr<algorithm::AlgorithmManager> f_algoManager);
+  ~CommunicationInterface() = default;
 
-  virtual bool handleIncomingMessage(const std::string &payload,
-                                     AWLEStatus &status) = 0;
+  bool handleIncomingMessage(const std::string &payload, AWLEStatus &status);
 
+private:
+  std::shared_ptr<communication::OpenSearchInterface> searchEngine;
+  std::shared_ptr<algorithm::AlgorithmManager> algoManager;
 };
 
 } // namespace communication

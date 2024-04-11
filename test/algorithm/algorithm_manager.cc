@@ -19,6 +19,7 @@
 #include <list>
 #include "../../src/algorithm/AlgorithmManager.h"
 #include "../../src/algorithm/AlgorithmInterface.h"
+#include "../helpers/FakeOpenSearchClient.h"
 
 using namespace std;
 using namespace algorithm;
@@ -26,7 +27,7 @@ using namespace asdk::generic;
 
 class FakeAlgorithm: public AlgorithmInterface {
 public:
-    explicit FakeAlgorithm() {}
+    explicit FakeAlgorithm(std::shared_ptr<test::FakeOpenSearch> f_searchEngine): AlgorithmInterface(f_searchEngine) {}
     ~FakeAlgorithm() = default;
 
     void prepare(AWLEStatus &status) override {};

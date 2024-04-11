@@ -41,7 +41,6 @@ set(TEST_APPLICATION_SRC
     "algorithm/power_exchange_detection.cc"
     "algorithm/charge_estimation.cc"
 
-    "communication/test_database_interface.cc" 
     "communication/test_json_body_parser.cc"
     "communication/test_open_search_client.cc"
     

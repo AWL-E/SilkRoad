@@ -14,6 +14,10 @@
  * limitations under the License.
  */
 
+/**
+ * Cette classe est une classe appartenant à AWL-E
+ * Auteur: Félix Champagne-Lapointe
+*/
 
 #ifndef _ASDK_GENERIC_ERRORCODES_H_
 #define _ASDK_GENERIC_ERRORCODES_H_

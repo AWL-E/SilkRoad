@@ -52,8 +52,10 @@ SET(APPLICATION_SOURCE_FILES
     algorithm/ChargeEstimation.cc
     
     asdk/generic/ErrorCodes.cc
-    
+
+    communication/CommunicationInterface.cc
     communication/OpenSearchClient.cc
+    communication/OpenSearchInterface.cc
     communication/database/DatabaseInterface.cc
     communication/http/CURLHTTPClient.cc
     communication/http/HTTPClientInterface.cc
@@ -61,6 +63,7 @@ SET(APPLICATION_SOURCE_FILES
     communication/parsing/JSONDataBodyParser.cc
 
     util/logging.cc
+    util/uuid.cc
 )
 
 SET(APPLICATION_INCLUDE_DIRS
@@ -76,6 +79,6 @@ target_link_libraries(application_lib glog::glog ${PROTOBUF_LIBRARIES} CURL::lib
 
 # Compile Application
 add_executable(application "main.cc")
-#target_link_libraries(application application_lib AWS::aws-lambda-runtime)
+target_link_libraries(application application_lib)
 
 install(TARGETS application)

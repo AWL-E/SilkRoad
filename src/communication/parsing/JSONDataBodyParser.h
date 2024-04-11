@@ -29,6 +29,9 @@ namespace communication::parsing {
 
 using asdk::generic::AWLEStatus;
 
+/**
+ * Classe qui permet d'obtenir les données d'une requête CURL en JSON
+ */
 class JSONDataBodyParser: public BodyParserInterface {
 public:
   explicit JSONDataBodyParser();

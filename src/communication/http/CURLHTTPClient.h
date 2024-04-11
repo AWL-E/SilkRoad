@@ -32,6 +32,9 @@ namespace communication {
 using communication::HTTPResponse;
 using asdk::generic::AWLEStatus;
 
+/**
+ * Client HTTP qui utilise libcurl pour envoyer des messages MQTT
+ */
 class CURLHTTPClient: public HTTPClientInterface {
 public:
     CURLHTTPClient(std::shared_ptr<communication::parsing::BodyParserInterface> f_bodyParser);

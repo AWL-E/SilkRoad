@@ -2,6 +2,7 @@
 #define _SILKROAD_ALGORITHM_CHARGEESTIMATION_H_
 
 #include "AlgorithmInterface.h"
+#include "../communication/OpenSearchInterface.h"
 
 static constexpr int MAX_BATTERY_CURRENT = 100;
 
@@ -18,6 +19,9 @@ struct DevicesInfo {
   float timestamp = 0;
 };
 
+/**
+ * Fausse classe qui abstrait le comportement de la base de données.
+*/
 class DatabaseManager {
 public:
   DatabaseManager() = default;
@@ -31,7 +35,6 @@ public:
         {1, 180.34, 200.56, 0.9, 90, 80,0.9},  {1, 220.45, 240.67, 1.0, 100, 80,1.0},
         {1, 260.56, 280.78, 1.1, 110, 80,1.1}, {1, 300.67, 320.89, 1.2, 120, 80,1.2},
         {1, 340.78, 360.90, 3.3, 130, 80,1.3}, {1, 380.89, 400.12, 1.4, 140, 80,1.4}};
-    // Code to fetch data from the databases
 
     for (auto const &batInfo : deviceBatteryInfos) {
       if (batInfo.id == id) {
@@ -42,10 +45,13 @@ public:
   }
 };
 
+/**
+ * Algorithme qui estime la charge d'une batterie à l'aide du comptage de coulomb.
+*/
 class ChargeEstimation : public AlgorithmInterface {
 
 public:
-  ChargeEstimation() = default;
+  explicit ChargeEstimation(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine);
   ~ChargeEstimation() = default;
 
   void prepare(AWLEStatus &status) override;

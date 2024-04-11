@@ -22,19 +22,26 @@
 #include <string>
 
 #include "../asdk/generic/ErrorCodes.h"
-
+#include "../communication/OpenSearchInterface.h"
 namespace algorithm {
 
 using asdk::generic::AWLEStatus;
 
+/**
+ * Interface qui décrit le comportement des algorithmes.
+ * Les algorithmes s'exécute en trois phases: prepare, execute, complete.
+*/
 class AlgorithmInterface {
 public:
-    explicit AlgorithmInterface();
+    explicit AlgorithmInterface(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine);
     virtual ~AlgorithmInterface() = default;
 
     virtual void prepare(AWLEStatus &status) = 0;
     virtual void execute(AWLEStatus &status) = 0;
     virtual void complete(AWLEStatus &status) = 0;
+
+protected:
+    std::shared_ptr<communication::OpenSearchInterface> searchEngine;
 };
 
 } // namespace algorithm

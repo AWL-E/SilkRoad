@@ -4,9 +4,11 @@
 
 namespace algorithm {
 
+PowerExchangeDetection::PowerExchangeDetection(std::shared_ptr<communication::OpenSearchInterface> f_searchEngine): AlgorithmInterface(f_searchEngine) {}
+
 void PowerExchangeDetection::prepare(AWLEStatus &status) {
 
-  db = std::make_unique<DatabaseManager>();
+  db = std::make_unique<DatabaseManager2>();
 
   rxDevicesInfo = db->getDeviceInfo();
 
@@ -39,8 +41,8 @@ void PowerExchangeDetection::complete(AWLEStatus &status) {
 }
 
 float PowerExchangeDetection::calculateDistance(
-    const DatabaseManager::DevicesInfo &tx,
-    const DatabaseManager::DevicesInfo &rx) {
+    const DatabaseManager2::DevicesInfo &tx,
+    const DatabaseManager2::DevicesInfo &rx) {
   float txLatitude = tx.latitude;
   float txLongitude = tx.longitude;
   float rxLatitude = rx.latitude;
@@ -65,7 +67,7 @@ float PowerExchangeDetection::calculateDistance(
 
 
 
-DatabaseManager::DevicesInfo PowerExchangeDetection::getDeviceID(uint16_t id) {
+DatabaseManager2::DevicesInfo PowerExchangeDetection::getDeviceID(uint16_t id) {
   for (const auto &rxDevice : rxDevicesInfo) {
     if (rxDevice.id == id) {
       return rxDevice;

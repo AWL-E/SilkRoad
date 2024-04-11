@@ -23,29 +23,37 @@
 
 #include "../asdk/generic/ErrorCodes.h"
 #include "./http/HTTPClientInterface.h"
+#include "../../build/src/ProtoMessages.pb.h"
+#include "OpenSearchInterface.h"
 
 namespace communication {
-    
-struct TermQueryParameters {
-    std::string termName;
-    std::string value;
-    uint16_t from;
-    uint16_t size;
-};
 
 using asdk::generic::AWLEStatus;
 
-class OpenSearchClient  {
+using UUIDCallback = std::function<std::string()>;
+
+/**
+ * Client OpenSearch HTTP. Permet de communiquer avec le serveurs, faire des recherches et enregistrer des données.
+ */
+class OpenSearchClient : public OpenSearchInterface {
+
 public:
-    OpenSearchClient(std::shared_ptr<HTTPClientInterface> f_httpClient, std::string f_domain);
+    using UUIDCallback = std::function<std::string()>;
+
+    OpenSearchClient(std::shared_ptr<HTTPClientInterface> f_httpClient, std::string f_domain, UUIDCallback f_uuidCreationCallback);
     ~OpenSearchClient() = default;
 
-    void searchIndexUsingTermQuery(std::string& indexName, TermQueryParameters& params, AWLEStatus& status);
-    void pushDocumentInIndex(std::string& indexName, std::string& serializedData, AWLEStatus& status);
+    void searchIndexUsingTermQuery(std::string& indexName, communication::TermQueryParameters& params, AWLEStatus& status) override;
+    
+    std::string bulkRequestHeaderFromIndexName(std::string& indexName) override;
+    void storeBulkRequest(std::string& requestHeader, std::string& requestData, AWLEStatus& status) override;
+    void sendBulkRequests(AWLEStatus& status) override;
 
 private:
+    UUIDCallback uuidCreationCallback;
     std::shared_ptr<HTTPClientInterface> httpClient;
     std::string domain;
+    std::vector<std::string> bulkRequests;
 };
 
 } // namespace communication

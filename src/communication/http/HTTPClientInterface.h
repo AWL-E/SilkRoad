@@ -35,6 +35,9 @@ struct HTTPResponse {
 
 using asdk::generic::AWLEStatus;
 
+/**
+ * Interface générique de client HTTP qui décrit les comportements de bases
+ */
 class HTTPClientInterface  {
 public:
     HTTPClientInterface(std::shared_ptr<communication::parsing::BodyParserInterface> f_bodyParser);
