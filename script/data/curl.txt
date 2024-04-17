@@ -1,0 +1,2 @@
+curl -XPOST -u 'admin:Awleonship!1' 'https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.ca-central-1.es.amazonaws.com/_bulk' --data-binary @notification.json -H 'Content-Type: application/json'
+curl -XPOST -u 'admin:Awleonship!1' 'https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.ca-central-1.es.amazonaws.com/_bulk' --data-binary @status.json -H 'Content-Type: application/json'

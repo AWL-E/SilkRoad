@@ -24,6 +24,17 @@ void ChargeEstimation::execute(AWLEStatus &status) {
 void ChargeEstimation::complete(AWLEStatus &status) {
     ProtoMessages::BatteryMessage msg;
     msg.set_batterypercentage(remainingChargePercentage);
+
+    std::string requestHeader = searchEngine->bulkRequestHeaderFromIndexName("ChargeEstimation");
+
+    std::string encodingResult;
+    google::protobuf::util::JsonPrintOptions encodingOptions;
+    encodingOptions.add_whitespace = true;
+    encodingOptions.always_print_primitive_fields = true;
+    encodingOptions.preserve_proto_field_names = true;
+    google::protobuf::util::MessageToJsonString(msg, &encodingResult, encodingOptions);
+
+    searchEngine->storeBulkRequest(requestHeader, encodingResult);
 }
 
 float ChargeEstimation::calculateCharge() {

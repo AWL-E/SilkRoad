@@ -22,10 +22,6 @@ using namespace std;
 */
 int main()
 {   
-
-
-// Vérifier que la lambda est bien invoquée.
-// TODO comportement abstracit par le LambdaRunTime interface
 // Créer les instances nécessaire à l'éxécution
     // Créer le AlgorithmDispatcher
     auto managerAlgo = make_shared<AlgorithmManager>();
@@ -35,7 +31,6 @@ int main()
     
     // Créer le client HTTP
     auto httpClient  = make_shared<CURLHTTPClient>(jsonParser);
-   
     
     // Créer le client OpenSearch
     std::string domain = "https://search-silkroad-test-cq3gzgphhaaiivvm7zua2fhaue.aos.ca-central-1.on.aws";
@@ -47,7 +42,7 @@ int main()
     // Créer l'interface de communication 
     auto interfaceCommunication = make_shared<CommunicationInterface>(searchEngine, managerAlgo);
 
-        /**     
+
 // Configuration
     std::string topicPowerExchange = "v1/verdant/+/+/+/chargingEvent";
     managerAlgo->addAlgorithm(topicPowerExchange, powerExchange);
@@ -59,7 +54,7 @@ int main()
     AWLEStatus status;
     std::string data = "";
     interfaceCommunication->handleIncomingMessage(data, status);
-*/
+
 // TODO manage status
 
 // Terminer l'appel lambda

@@ -5,8 +5,8 @@ from datetime import datetime
 # Génère une fausse notification
 def generate_notification():
     notification = {
-        "type": str(random.choice(['Battery below 20%', 'Battery below 10%', 'Battery is fully charged', 'Out of perimeter'])),
-        "timestamp": datetime(year=2024, month=4, day=random.randint(1, 2), 
+        "type": str(random.choice(['Battery below 20%'])),
+        "timestamp": datetime(year=2024, month=4, day=17, 
                               hour=random.randint(0, 23), minute=random.randint(0, 59), 
                               second=random.randint(0, 59)).strftime('%Y-%m-%dT%H:%M:%S'),
         "deviceId": str(random.randint(0, 100))
@@ -30,5 +30,5 @@ def generate_bulk_request(num_requests, outputJson):
             
 # Modifier les paramètres
 if __name__ == "__main__":
-    num_requests = 10000
+    num_requests = 200
     generate_bulk_request(num_requests, "notification.json")

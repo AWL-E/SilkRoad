@@ -1,0 +1,400 @@
+{"index": {"_index": "notification_2024_04", "_id": 0}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T22:20:19", "deviceId": "42"}
+{"index": {"_index": "notification_2024_04", "_id": 1}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:37:07", "deviceId": "50"}
+{"index": {"_index": "notification_2024_04", "_id": 2}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:08:14", "deviceId": "44"}
+{"index": {"_index": "notification_2024_04", "_id": 3}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:09:11", "deviceId": "70"}
+{"index": {"_index": "notification_2024_04", "_id": 4}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:19:30", "deviceId": "89"}
+{"index": {"_index": "notification_2024_04", "_id": 5}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:37:13", "deviceId": "7"}
+{"index": {"_index": "notification_2024_04", "_id": 6}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T07:21:52", "deviceId": "100"}
+{"index": {"_index": "notification_2024_04", "_id": 7}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:31:14", "deviceId": "8"}
+{"index": {"_index": "notification_2024_04", "_id": 8}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T13:26:12", "deviceId": "36"}
+{"index": {"_index": "notification_2024_04", "_id": 9}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:52:08", "deviceId": "42"}
+{"index": {"_index": "notification_2024_04", "_id": 10}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T07:05:41", "deviceId": "82"}
+{"index": {"_index": "notification_2024_04", "_id": 11}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:51:40", "deviceId": "40"}
+{"index": {"_index": "notification_2024_04", "_id": 12}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T13:49:15", "deviceId": "55"}
+{"index": {"_index": "notification_2024_04", "_id": 13}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:16:00", "deviceId": "71"}
+{"index": {"_index": "notification_2024_04", "_id": 14}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:54:50", "deviceId": "61"}
+{"index": {"_index": "notification_2024_04", "_id": 15}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T06:03:06", "deviceId": "66"}
+{"index": {"_index": "notification_2024_04", "_id": 16}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:58:09", "deviceId": "26"}
+{"index": {"_index": "notification_2024_04", "_id": 17}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:35:36", "deviceId": "47"}
+{"index": {"_index": "notification_2024_04", "_id": 18}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T22:13:39", "deviceId": "3"}
+{"index": {"_index": "notification_2024_04", "_id": 19}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T21:44:49", "deviceId": "96"}
+{"index": {"_index": "notification_2024_04", "_id": 20}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:32:52", "deviceId": "36"}
+{"index": {"_index": "notification_2024_04", "_id": 21}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:30:44", "deviceId": "51"}
+{"index": {"_index": "notification_2024_04", "_id": 22}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:20:16", "deviceId": "54"}
+{"index": {"_index": "notification_2024_04", "_id": 23}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:28:14", "deviceId": "63"}
+{"index": {"_index": "notification_2024_04", "_id": 24}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:49:04", "deviceId": "94"}
+{"index": {"_index": "notification_2024_04", "_id": 25}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:12:11", "deviceId": "38"}
+{"index": {"_index": "notification_2024_04", "_id": 26}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:54:59", "deviceId": "18"}
+{"index": {"_index": "notification_2024_04", "_id": 27}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:29:33", "deviceId": "13"}
+{"index": {"_index": "notification_2024_04", "_id": 28}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:56:22", "deviceId": "30"}
+{"index": {"_index": "notification_2024_04", "_id": 29}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:46:47", "deviceId": "20"}
+{"index": {"_index": "notification_2024_04", "_id": 30}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:27:44", "deviceId": "57"}
+{"index": {"_index": "notification_2024_04", "_id": 31}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:10:43", "deviceId": "88"}
+{"index": {"_index": "notification_2024_04", "_id": 32}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:59:21", "deviceId": "86"}
+{"index": {"_index": "notification_2024_04", "_id": 33}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:41:33", "deviceId": "28"}
+{"index": {"_index": "notification_2024_04", "_id": 34}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:17:53", "deviceId": "33"}
+{"index": {"_index": "notification_2024_04", "_id": 35}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:08:35", "deviceId": "97"}
+{"index": {"_index": "notification_2024_04", "_id": 36}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:22:08", "deviceId": "75"}
+{"index": {"_index": "notification_2024_04", "_id": 37}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:53:45", "deviceId": "42"}
+{"index": {"_index": "notification_2024_04", "_id": 38}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T21:56:01", "deviceId": "82"}
+{"index": {"_index": "notification_2024_04", "_id": 39}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:45:41", "deviceId": "83"}
+{"index": {"_index": "notification_2024_04", "_id": 40}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:46:50", "deviceId": "51"}
+{"index": {"_index": "notification_2024_04", "_id": 41}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T16:44:08", "deviceId": "99"}
+{"index": {"_index": "notification_2024_04", "_id": 42}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:04:46", "deviceId": "100"}
+{"index": {"_index": "notification_2024_04", "_id": 43}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T16:53:44", "deviceId": "1"}
+{"index": {"_index": "notification_2024_04", "_id": 44}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:20:53", "deviceId": "75"}
+{"index": {"_index": "notification_2024_04", "_id": 45}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:53:15", "deviceId": "39"}
+{"index": {"_index": "notification_2024_04", "_id": 46}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T07:36:39", "deviceId": "34"}
+{"index": {"_index": "notification_2024_04", "_id": 47}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:20:18", "deviceId": "29"}
+{"index": {"_index": "notification_2024_04", "_id": 48}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:20:57", "deviceId": "24"}
+{"index": {"_index": "notification_2024_04", "_id": 49}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T07:00:52", "deviceId": "0"}
+{"index": {"_index": "notification_2024_04", "_id": 50}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:39:16", "deviceId": "6"}
+{"index": {"_index": "notification_2024_04", "_id": 51}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:17:49", "deviceId": "61"}
+{"index": {"_index": "notification_2024_04", "_id": 52}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:26:51", "deviceId": "74"}
+{"index": {"_index": "notification_2024_04", "_id": 53}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:04:37", "deviceId": "11"}
+{"index": {"_index": "notification_2024_04", "_id": 54}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:54:53", "deviceId": "27"}
+{"index": {"_index": "notification_2024_04", "_id": 55}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:18:08", "deviceId": "13"}
+{"index": {"_index": "notification_2024_04", "_id": 56}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T03:01:05", "deviceId": "25"}
+{"index": {"_index": "notification_2024_04", "_id": 57}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T22:10:35", "deviceId": "21"}
+{"index": {"_index": "notification_2024_04", "_id": 58}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:53:03", "deviceId": "66"}
+{"index": {"_index": "notification_2024_04", "_id": 59}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T16:29:02", "deviceId": "2"}
+{"index": {"_index": "notification_2024_04", "_id": 60}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:57:17", "deviceId": "94"}
+{"index": {"_index": "notification_2024_04", "_id": 61}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T03:53:10", "deviceId": "66"}
+{"index": {"_index": "notification_2024_04", "_id": 62}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:26:59", "deviceId": "41"}
+{"index": {"_index": "notification_2024_04", "_id": 63}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:45:44", "deviceId": "7"}
+{"index": {"_index": "notification_2024_04", "_id": 64}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:48:46", "deviceId": "14"}
+{"index": {"_index": "notification_2024_04", "_id": 65}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T16:58:56", "deviceId": "19"}
+{"index": {"_index": "notification_2024_04", "_id": 66}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T03:19:28", "deviceId": "42"}
+{"index": {"_index": "notification_2024_04", "_id": 67}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:11:38", "deviceId": "8"}
+{"index": {"_index": "notification_2024_04", "_id": 68}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:04:04", "deviceId": "74"}
+{"index": {"_index": "notification_2024_04", "_id": 69}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:53:27", "deviceId": "40"}
+{"index": {"_index": "notification_2024_04", "_id": 70}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:16:18", "deviceId": "80"}
+{"index": {"_index": "notification_2024_04", "_id": 71}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T22:49:24", "deviceId": "28"}
+{"index": {"_index": "notification_2024_04", "_id": 72}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:57:56", "deviceId": "75"}
+{"index": {"_index": "notification_2024_04", "_id": 73}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:47:45", "deviceId": "66"}
+{"index": {"_index": "notification_2024_04", "_id": 74}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:58:22", "deviceId": "8"}
+{"index": {"_index": "notification_2024_04", "_id": 75}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:27:24", "deviceId": "7"}
+{"index": {"_index": "notification_2024_04", "_id": 76}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:00:38", "deviceId": "98"}
+{"index": {"_index": "notification_2024_04", "_id": 77}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:21:39", "deviceId": "20"}
+{"index": {"_index": "notification_2024_04", "_id": 78}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:09:44", "deviceId": "60"}
+{"index": {"_index": "notification_2024_04", "_id": 79}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:42:10", "deviceId": "75"}
+{"index": {"_index": "notification_2024_04", "_id": 80}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:12:59", "deviceId": "86"}
+{"index": {"_index": "notification_2024_04", "_id": 81}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:24:52", "deviceId": "65"}
+{"index": {"_index": "notification_2024_04", "_id": 82}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T22:40:38", "deviceId": "84"}
+{"index": {"_index": "notification_2024_04", "_id": 83}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:00:54", "deviceId": "51"}
+{"index": {"_index": "notification_2024_04", "_id": 84}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:35:47", "deviceId": "7"}
+{"index": {"_index": "notification_2024_04", "_id": 85}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:23:19", "deviceId": "86"}
+{"index": {"_index": "notification_2024_04", "_id": 86}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:51:31", "deviceId": "52"}
+{"index": {"_index": "notification_2024_04", "_id": 87}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:03:23", "deviceId": "35"}
+{"index": {"_index": "notification_2024_04", "_id": 88}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:51:39", "deviceId": "87"}
+{"index": {"_index": "notification_2024_04", "_id": 89}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:46:15", "deviceId": "67"}
+{"index": {"_index": "notification_2024_04", "_id": 90}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:20:23", "deviceId": "76"}
+{"index": {"_index": "notification_2024_04", "_id": 91}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T22:36:10", "deviceId": "17"}
+{"index": {"_index": "notification_2024_04", "_id": 92}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T21:18:50", "deviceId": "53"}
+{"index": {"_index": "notification_2024_04", "_id": 93}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:52:58", "deviceId": "74"}
+{"index": {"_index": "notification_2024_04", "_id": 94}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:12:57", "deviceId": "51"}
+{"index": {"_index": "notification_2024_04", "_id": 95}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:37:44", "deviceId": "20"}
+{"index": {"_index": "notification_2024_04", "_id": 96}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:01:51", "deviceId": "83"}
+{"index": {"_index": "notification_2024_04", "_id": 97}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:57:42", "deviceId": "96"}
+{"index": {"_index": "notification_2024_04", "_id": 98}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:13:12", "deviceId": "3"}
+{"index": {"_index": "notification_2024_04", "_id": 99}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:14:36", "deviceId": "40"}
+{"index": {"_index": "notification_2024_04", "_id": 100}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:00:24", "deviceId": "26"}
+{"index": {"_index": "notification_2024_04", "_id": 101}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:34:44", "deviceId": "16"}
+{"index": {"_index": "notification_2024_04", "_id": 102}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:40:42", "deviceId": "70"}
+{"index": {"_index": "notification_2024_04", "_id": 103}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:53:49", "deviceId": "46"}
+{"index": {"_index": "notification_2024_04", "_id": 104}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:31:31", "deviceId": "39"}
+{"index": {"_index": "notification_2024_04", "_id": 105}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T01:34:22", "deviceId": "58"}
+{"index": {"_index": "notification_2024_04", "_id": 106}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:19:30", "deviceId": "57"}
+{"index": {"_index": "notification_2024_04", "_id": 107}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:57:50", "deviceId": "86"}
+{"index": {"_index": "notification_2024_04", "_id": 108}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:03:57", "deviceId": "54"}
+{"index": {"_index": "notification_2024_04", "_id": 109}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:42:39", "deviceId": "81"}
+{"index": {"_index": "notification_2024_04", "_id": 110}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T06:46:53", "deviceId": "97"}
+{"index": {"_index": "notification_2024_04", "_id": 111}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:20:12", "deviceId": "26"}
+{"index": {"_index": "notification_2024_04", "_id": 112}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:31:58", "deviceId": "22"}
+{"index": {"_index": "notification_2024_04", "_id": 113}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:28:31", "deviceId": "52"}
+{"index": {"_index": "notification_2024_04", "_id": 114}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T03:51:57", "deviceId": "37"}
+{"index": {"_index": "notification_2024_04", "_id": 115}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:36:43", "deviceId": "53"}
+{"index": {"_index": "notification_2024_04", "_id": 116}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:05:36", "deviceId": "41"}
+{"index": {"_index": "notification_2024_04", "_id": 117}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T03:31:33", "deviceId": "1"}
+{"index": {"_index": "notification_2024_04", "_id": 118}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:16:14", "deviceId": "44"}
+{"index": {"_index": "notification_2024_04", "_id": 119}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:00:25", "deviceId": "48"}
+{"index": {"_index": "notification_2024_04", "_id": 120}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:53:45", "deviceId": "65"}
+{"index": {"_index": "notification_2024_04", "_id": 121}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:24:00", "deviceId": "85"}
+{"index": {"_index": "notification_2024_04", "_id": 122}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:42:08", "deviceId": "96"}
+{"index": {"_index": "notification_2024_04", "_id": 123}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:10:59", "deviceId": "72"}
+{"index": {"_index": "notification_2024_04", "_id": 124}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:28:55", "deviceId": "54"}
+{"index": {"_index": "notification_2024_04", "_id": 125}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:33:03", "deviceId": "57"}
+{"index": {"_index": "notification_2024_04", "_id": 126}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:31:28", "deviceId": "49"}
+{"index": {"_index": "notification_2024_04", "_id": 127}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:08:59", "deviceId": "22"}
+{"index": {"_index": "notification_2024_04", "_id": 128}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:47:05", "deviceId": "27"}
+{"index": {"_index": "notification_2024_04", "_id": 129}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T06:27:16", "deviceId": "19"}
+{"index": {"_index": "notification_2024_04", "_id": 130}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:01:40", "deviceId": "67"}
+{"index": {"_index": "notification_2024_04", "_id": 131}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:08:58", "deviceId": "39"}
+{"index": {"_index": "notification_2024_04", "_id": 132}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:40:56", "deviceId": "16"}
+{"index": {"_index": "notification_2024_04", "_id": 133}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:40:52", "deviceId": "25"}
+{"index": {"_index": "notification_2024_04", "_id": 134}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T18:29:53", "deviceId": "83"}
+{"index": {"_index": "notification_2024_04", "_id": 135}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T21:25:49", "deviceId": "30"}
+{"index": {"_index": "notification_2024_04", "_id": 136}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:38:38", "deviceId": "23"}
+{"index": {"_index": "notification_2024_04", "_id": 137}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:23:01", "deviceId": "0"}
+{"index": {"_index": "notification_2024_04", "_id": 138}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:15:16", "deviceId": "38"}
+{"index": {"_index": "notification_2024_04", "_id": 139}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:07:30", "deviceId": "49"}
+{"index": {"_index": "notification_2024_04", "_id": 140}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:40:49", "deviceId": "32"}
+{"index": {"_index": "notification_2024_04", "_id": 141}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:30:31", "deviceId": "81"}
+{"index": {"_index": "notification_2024_04", "_id": 142}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:19:31", "deviceId": "18"}
+{"index": {"_index": "notification_2024_04", "_id": 143}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T13:28:49", "deviceId": "14"}
+{"index": {"_index": "notification_2024_04", "_id": 144}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:52:14", "deviceId": "32"}
+{"index": {"_index": "notification_2024_04", "_id": 145}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T06:00:57", "deviceId": "33"}
+{"index": {"_index": "notification_2024_04", "_id": 146}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:29:50", "deviceId": "78"}
+{"index": {"_index": "notification_2024_04", "_id": 147}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:16:23", "deviceId": "92"}
+{"index": {"_index": "notification_2024_04", "_id": 148}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:19:50", "deviceId": "89"}
+{"index": {"_index": "notification_2024_04", "_id": 149}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T08:38:23", "deviceId": "80"}
+{"index": {"_index": "notification_2024_04", "_id": 150}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:59:47", "deviceId": "67"}
+{"index": {"_index": "notification_2024_04", "_id": 151}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:36:25", "deviceId": "34"}
+{"index": {"_index": "notification_2024_04", "_id": 152}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:30:14", "deviceId": "35"}
+{"index": {"_index": "notification_2024_04", "_id": 153}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:47:48", "deviceId": "38"}
+{"index": {"_index": "notification_2024_04", "_id": 154}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:09:45", "deviceId": "83"}
+{"index": {"_index": "notification_2024_04", "_id": 155}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:14:23", "deviceId": "77"}
+{"index": {"_index": "notification_2024_04", "_id": 156}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T06:18:57", "deviceId": "9"}
+{"index": {"_index": "notification_2024_04", "_id": 157}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:37:24", "deviceId": "9"}
+{"index": {"_index": "notification_2024_04", "_id": 158}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T07:30:54", "deviceId": "64"}
+{"index": {"_index": "notification_2024_04", "_id": 159}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:14:06", "deviceId": "0"}
+{"index": {"_index": "notification_2024_04", "_id": 160}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:16:12", "deviceId": "94"}
+{"index": {"_index": "notification_2024_04", "_id": 161}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:12:09", "deviceId": "54"}
+{"index": {"_index": "notification_2024_04", "_id": 162}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:32:07", "deviceId": "13"}
+{"index": {"_index": "notification_2024_04", "_id": 163}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:30:20", "deviceId": "68"}
+{"index": {"_index": "notification_2024_04", "_id": 164}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T19:44:28", "deviceId": "78"}
+{"index": {"_index": "notification_2024_04", "_id": 165}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:42:28", "deviceId": "67"}
+{"index": {"_index": "notification_2024_04", "_id": 166}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T18:02:29", "deviceId": "37"}
+{"index": {"_index": "notification_2024_04", "_id": 167}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T18:02:18", "deviceId": "54"}
+{"index": {"_index": "notification_2024_04", "_id": 168}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:00:39", "deviceId": "85"}
+{"index": {"_index": "notification_2024_04", "_id": 169}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T09:25:11", "deviceId": "74"}
+{"index": {"_index": "notification_2024_04", "_id": 170}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:03:52", "deviceId": "2"}
+{"index": {"_index": "notification_2024_04", "_id": 171}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:19:30", "deviceId": "51"}
+{"index": {"_index": "notification_2024_04", "_id": 172}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:29:38", "deviceId": "64"}
+{"index": {"_index": "notification_2024_04", "_id": 173}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T18:23:40", "deviceId": "82"}
+{"index": {"_index": "notification_2024_04", "_id": 174}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T10:21:21", "deviceId": "66"}
+{"index": {"_index": "notification_2024_04", "_id": 175}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T18:12:33", "deviceId": "55"}
+{"index": {"_index": "notification_2024_04", "_id": 176}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:38:21", "deviceId": "75"}
+{"index": {"_index": "notification_2024_04", "_id": 177}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:11:52", "deviceId": "42"}
+{"index": {"_index": "notification_2024_04", "_id": 178}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:37:55", "deviceId": "31"}
+{"index": {"_index": "notification_2024_04", "_id": 179}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:12:08", "deviceId": "90"}
+{"index": {"_index": "notification_2024_04", "_id": 180}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T04:01:04", "deviceId": "18"}
+{"index": {"_index": "notification_2024_04", "_id": 181}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:12:46", "deviceId": "89"}
+{"index": {"_index": "notification_2024_04", "_id": 182}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T03:33:21", "deviceId": "34"}
+{"index": {"_index": "notification_2024_04", "_id": 183}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T02:27:01", "deviceId": "78"}
+{"index": {"_index": "notification_2024_04", "_id": 184}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:36:52", "deviceId": "94"}
+{"index": {"_index": "notification_2024_04", "_id": 185}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T12:34:17", "deviceId": "83"}
+{"index": {"_index": "notification_2024_04", "_id": 186}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T23:50:10", "deviceId": "7"}
+{"index": {"_index": "notification_2024_04", "_id": 187}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:06:37", "deviceId": "47"}
+{"index": {"_index": "notification_2024_04", "_id": 188}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:18:05", "deviceId": "11"}
+{"index": {"_index": "notification_2024_04", "_id": 189}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:30:47", "deviceId": "30"}
+{"index": {"_index": "notification_2024_04", "_id": 190}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T20:31:24", "deviceId": "55"}
+{"index": {"_index": "notification_2024_04", "_id": 191}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:48:21", "deviceId": "65"}
+{"index": {"_index": "notification_2024_04", "_id": 192}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:37:05", "deviceId": "85"}
+{"index": {"_index": "notification_2024_04", "_id": 193}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T11:30:38", "deviceId": "91"}
+{"index": {"_index": "notification_2024_04", "_id": 194}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:06:54", "deviceId": "36"}
+{"index": {"_index": "notification_2024_04", "_id": 195}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T17:15:03", "deviceId": "56"}
+{"index": {"_index": "notification_2024_04", "_id": 196}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T15:08:30", "deviceId": "3"}
+{"index": {"_index": "notification_2024_04", "_id": 197}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T14:33:08", "deviceId": "11"}
+{"index": {"_index": "notification_2024_04", "_id": 198}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T05:37:49", "deviceId": "12"}
+{"index": {"_index": "notification_2024_04", "_id": 199}}
+{"type": "Battery below 20%", "timestamp": "2024-04-17T00:38:04", "deviceId": "28"}

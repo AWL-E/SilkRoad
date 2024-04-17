@@ -1,0 +1,200 @@
+{"index": {"_index": "device_status_202404", "_id": 0}}
+{"deviceId": "554", "isCharging": true, "percentCharged": 72, "timestamp": "2024-04-17T11:15:09"}
+{"index": {"_index": "device_status_202404", "_id": 1}}
+{"deviceId": "419", "isCharging": false, "percentCharged": 27, "timestamp": "2024-04-17T08:51:22"}
+{"index": {"_index": "device_status_202404", "_id": 2}}
+{"deviceId": "836", "isCharging": true, "percentCharged": 12, "timestamp": "2024-04-17T06:48:27"}
+{"index": {"_index": "device_status_202404", "_id": 3}}
+{"deviceId": "661", "isCharging": false, "percentCharged": 26, "timestamp": "2024-04-17T11:16:53"}
+{"index": {"_index": "device_status_202404", "_id": 4}}
+{"deviceId": "248", "isCharging": false, "percentCharged": 77, "timestamp": "2024-04-17T22:59:35"}
+{"index": {"_index": "device_status_202404", "_id": 5}}
+{"deviceId": "219", "isCharging": false, "percentCharged": 74, "timestamp": "2024-04-17T07:53:21"}
+{"index": {"_index": "device_status_202404", "_id": 6}}
+{"deviceId": "134", "isCharging": true, "percentCharged": 0, "timestamp": "2024-04-17T23:48:37"}
+{"index": {"_index": "device_status_202404", "_id": 7}}
+{"deviceId": "881", "isCharging": false, "percentCharged": 83, "timestamp": "2024-04-17T09:25:15"}
+{"index": {"_index": "device_status_202404", "_id": 8}}
+{"deviceId": "94", "isCharging": true, "percentCharged": 35, "timestamp": "2024-04-17T21:38:35"}
+{"index": {"_index": "device_status_202404", "_id": 9}}
+{"deviceId": "395", "isCharging": false, "percentCharged": 100, "timestamp": "2024-04-17T07:59:31"}
+{"index": {"_index": "device_status_202404", "_id": 10}}
+{"deviceId": "739", "isCharging": false, "percentCharged": 37, "timestamp": "2024-04-17T15:39:55"}
+{"index": {"_index": "device_status_202404", "_id": 11}}
+{"deviceId": "202", "isCharging": true, "percentCharged": 16, "timestamp": "2024-04-17T12:20:01"}
+{"index": {"_index": "device_status_202404", "_id": 12}}
+{"deviceId": "252", "isCharging": true, "percentCharged": 90, "timestamp": "2024-04-17T02:39:05"}
+{"index": {"_index": "device_status_202404", "_id": 13}}
+{"deviceId": "635", "isCharging": false, "percentCharged": 87, "timestamp": "2024-04-17T09:37:45"}
+{"index": {"_index": "device_status_202404", "_id": 14}}
+{"deviceId": "554", "isCharging": true, "percentCharged": 45, "timestamp": "2024-04-17T13:35:20"}
+{"index": {"_index": "device_status_202404", "_id": 15}}
+{"deviceId": "513", "isCharging": false, "percentCharged": 21, "timestamp": "2024-04-17T03:08:05"}
+{"index": {"_index": "device_status_202404", "_id": 16}}
+{"deviceId": "383", "isCharging": true, "percentCharged": 63, "timestamp": "2024-04-17T23:54:25"}
+{"index": {"_index": "device_status_202404", "_id": 17}}
+{"deviceId": "815", "isCharging": false, "percentCharged": 19, "timestamp": "2024-04-17T17:02:35"}
+{"index": {"_index": "device_status_202404", "_id": 18}}
+{"deviceId": "566", "isCharging": true, "percentCharged": 48, "timestamp": "2024-04-17T06:19:18"}
+{"index": {"_index": "device_status_202404", "_id": 19}}
+{"deviceId": "685", "isCharging": false, "percentCharged": 74, "timestamp": "2024-04-17T01:15:17"}
+{"index": {"_index": "device_status_202404", "_id": 20}}
+{"deviceId": "264", "isCharging": false, "percentCharged": 69, "timestamp": "2024-04-17T09:44:34"}
+{"index": {"_index": "device_status_202404", "_id": 21}}
+{"deviceId": "782", "isCharging": true, "percentCharged": 41, "timestamp": "2024-04-17T22:37:26"}
+{"index": {"_index": "device_status_202404", "_id": 22}}
+{"deviceId": "177", "isCharging": false, "percentCharged": 60, "timestamp": "2024-04-17T05:40:26"}
+{"index": {"_index": "device_status_202404", "_id": 23}}
+{"deviceId": "213", "isCharging": false, "percentCharged": 42, "timestamp": "2024-04-17T12:10:32"}
+{"index": {"_index": "device_status_202404", "_id": 24}}
+{"deviceId": "229", "isCharging": false, "percentCharged": 63, "timestamp": "2024-04-17T05:50:39"}
+{"index": {"_index": "device_status_202404", "_id": 25}}
+{"deviceId": "141", "isCharging": false, "percentCharged": 99, "timestamp": "2024-04-17T09:02:37"}
+{"index": {"_index": "device_status_202404", "_id": 26}}
+{"deviceId": "134", "isCharging": true, "percentCharged": 88, "timestamp": "2024-04-17T22:32:28"}
+{"index": {"_index": "device_status_202404", "_id": 27}}
+{"deviceId": "736", "isCharging": true, "percentCharged": 41, "timestamp": "2024-04-17T10:10:29"}
+{"index": {"_index": "device_status_202404", "_id": 28}}
+{"deviceId": "55", "isCharging": true, "percentCharged": 42, "timestamp": "2024-04-17T18:09:23"}
+{"index": {"_index": "device_status_202404", "_id": 29}}
+{"deviceId": "170", "isCharging": true, "percentCharged": 18, "timestamp": "2024-04-17T13:42:47"}
+{"index": {"_index": "device_status_202404", "_id": 30}}
+{"deviceId": "877", "isCharging": false, "percentCharged": 33, "timestamp": "2024-04-17T01:19:04"}
+{"index": {"_index": "device_status_202404", "_id": 31}}
+{"deviceId": "385", "isCharging": true, "percentCharged": 67, "timestamp": "2024-04-17T09:04:07"}
+{"index": {"_index": "device_status_202404", "_id": 32}}
+{"deviceId": "412", "isCharging": true, "percentCharged": 91, "timestamp": "2024-04-17T08:11:50"}
+{"index": {"_index": "device_status_202404", "_id": 33}}
+{"deviceId": "627", "isCharging": false, "percentCharged": 28, "timestamp": "2024-04-17T19:27:32"}
+{"index": {"_index": "device_status_202404", "_id": 34}}
+{"deviceId": "889", "isCharging": false, "percentCharged": 16, "timestamp": "2024-04-17T01:28:16"}
+{"index": {"_index": "device_status_202404", "_id": 35}}
+{"deviceId": "18", "isCharging": true, "percentCharged": 94, "timestamp": "2024-04-17T03:01:52"}
+{"index": {"_index": "device_status_202404", "_id": 36}}
+{"deviceId": "829", "isCharging": false, "percentCharged": 1, "timestamp": "2024-04-17T15:32:43"}
+{"index": {"_index": "device_status_202404", "_id": 37}}
+{"deviceId": "348", "isCharging": true, "percentCharged": 41, "timestamp": "2024-04-17T23:15:33"}
+{"index": {"_index": "device_status_202404", "_id": 38}}
+{"deviceId": "203", "isCharging": true, "percentCharged": 49, "timestamp": "2024-04-17T12:28:37"}
+{"index": {"_index": "device_status_202404", "_id": 39}}
+{"deviceId": "140", "isCharging": false, "percentCharged": 67, "timestamp": "2024-04-17T20:56:07"}
+{"index": {"_index": "device_status_202404", "_id": 40}}
+{"deviceId": "818", "isCharging": false, "percentCharged": 15, "timestamp": "2024-04-17T00:21:37"}
+{"index": {"_index": "device_status_202404", "_id": 41}}
+{"deviceId": "46", "isCharging": false, "percentCharged": 58, "timestamp": "2024-04-17T22:11:55"}
+{"index": {"_index": "device_status_202404", "_id": 42}}
+{"deviceId": "688", "isCharging": true, "percentCharged": 82, "timestamp": "2024-04-17T04:43:56"}
+{"index": {"_index": "device_status_202404", "_id": 43}}
+{"deviceId": "354", "isCharging": true, "percentCharged": 0, "timestamp": "2024-04-17T04:15:36"}
+{"index": {"_index": "device_status_202404", "_id": 44}}
+{"deviceId": "252", "isCharging": true, "percentCharged": 32, "timestamp": "2024-04-17T07:49:00"}
+{"index": {"_index": "device_status_202404", "_id": 45}}
+{"deviceId": "220", "isCharging": false, "percentCharged": 80, "timestamp": "2024-04-17T16:58:43"}
+{"index": {"_index": "device_status_202404", "_id": 46}}
+{"deviceId": "237", "isCharging": false, "percentCharged": 17, "timestamp": "2024-04-17T11:30:40"}
+{"index": {"_index": "device_status_202404", "_id": 47}}
+{"deviceId": "452", "isCharging": false, "percentCharged": 75, "timestamp": "2024-04-17T11:40:25"}
+{"index": {"_index": "device_status_202404", "_id": 48}}
+{"deviceId": "698", "isCharging": true, "percentCharged": 39, "timestamp": "2024-04-17T00:10:41"}
+{"index": {"_index": "device_status_202404", "_id": 49}}
+{"deviceId": "488", "isCharging": true, "percentCharged": 42, "timestamp": "2024-04-17T08:01:48"}
+{"index": {"_index": "device_status_202404", "_id": 50}}
+{"deviceId": "780", "isCharging": false, "percentCharged": 60, "timestamp": "2024-04-17T16:56:44"}
+{"index": {"_index": "device_status_202404", "_id": 51}}
+{"deviceId": "355", "isCharging": true, "percentCharged": 91, "timestamp": "2024-04-17T13:48:24"}
+{"index": {"_index": "device_status_202404", "_id": 52}}
+{"deviceId": "185", "isCharging": true, "percentCharged": 0, "timestamp": "2024-04-17T17:04:43"}
+{"index": {"_index": "device_status_202404", "_id": 53}}
+{"deviceId": "981", "isCharging": true, "percentCharged": 53, "timestamp": "2024-04-17T10:16:47"}
+{"index": {"_index": "device_status_202404", "_id": 54}}
+{"deviceId": "498", "isCharging": true, "percentCharged": 71, "timestamp": "2024-04-17T05:27:21"}
+{"index": {"_index": "device_status_202404", "_id": 55}}
+{"deviceId": "623", "isCharging": false, "percentCharged": 10, "timestamp": "2024-04-17T06:38:34"}
+{"index": {"_index": "device_status_202404", "_id": 56}}
+{"deviceId": "809", "isCharging": false, "percentCharged": 18, "timestamp": "2024-04-17T04:53:18"}
+{"index": {"_index": "device_status_202404", "_id": 57}}
+{"deviceId": "1", "isCharging": true, "percentCharged": 10, "timestamp": "2024-04-17T19:10:50"}
+{"index": {"_index": "device_status_202404", "_id": 58}}
+{"deviceId": "184", "isCharging": false, "percentCharged": 87, "timestamp": "2024-04-17T10:28:54"}
+{"index": {"_index": "device_status_202404", "_id": 59}}
+{"deviceId": "891", "isCharging": true, "percentCharged": 10, "timestamp": "2024-04-17T10:27:23"}
+{"index": {"_index": "device_status_202404", "_id": 60}}
+{"deviceId": "735", "isCharging": true, "percentCharged": 86, "timestamp": "2024-04-17T23:29:48"}
+{"index": {"_index": "device_status_202404", "_id": 61}}
+{"deviceId": "993", "isCharging": true, "percentCharged": 49, "timestamp": "2024-04-17T01:25:50"}
+{"index": {"_index": "device_status_202404", "_id": 62}}
+{"deviceId": "651", "isCharging": false, "percentCharged": 2, "timestamp": "2024-04-17T10:43:18"}
+{"index": {"_index": "device_status_202404", "_id": 63}}
+{"deviceId": "779", "isCharging": true, "percentCharged": 19, "timestamp": "2024-04-17T16:31:09"}
+{"index": {"_index": "device_status_202404", "_id": 64}}
+{"deviceId": "207", "isCharging": true, "percentCharged": 46, "timestamp": "2024-04-17T10:58:54"}
+{"index": {"_index": "device_status_202404", "_id": 65}}
+{"deviceId": "802", "isCharging": false, "percentCharged": 74, "timestamp": "2024-04-17T05:24:19"}
+{"index": {"_index": "device_status_202404", "_id": 66}}
+{"deviceId": "885", "isCharging": true, "percentCharged": 67, "timestamp": "2024-04-17T17:32:39"}
+{"index": {"_index": "device_status_202404", "_id": 67}}
+{"deviceId": "759", "isCharging": true, "percentCharged": 30, "timestamp": "2024-04-17T11:27:19"}
+{"index": {"_index": "device_status_202404", "_id": 68}}
+{"deviceId": "898", "isCharging": true, "percentCharged": 0, "timestamp": "2024-04-17T00:43:18"}
+{"index": {"_index": "device_status_202404", "_id": 69}}
+{"deviceId": "559", "isCharging": false, "percentCharged": 88, "timestamp": "2024-04-17T16:48:04"}
+{"index": {"_index": "device_status_202404", "_id": 70}}
+{"deviceId": "700", "isCharging": false, "percentCharged": 27, "timestamp": "2024-04-17T12:31:59"}
+{"index": {"_index": "device_status_202404", "_id": 71}}
+{"deviceId": "793", "isCharging": true, "percentCharged": 3, "timestamp": "2024-04-17T16:39:40"}
+{"index": {"_index": "device_status_202404", "_id": 72}}
+{"deviceId": "628", "isCharging": false, "percentCharged": 9, "timestamp": "2024-04-17T02:28:36"}
+{"index": {"_index": "device_status_202404", "_id": 73}}
+{"deviceId": "693", "isCharging": true, "percentCharged": 30, "timestamp": "2024-04-17T02:23:17"}
+{"index": {"_index": "device_status_202404", "_id": 74}}
+{"deviceId": "168", "isCharging": true, "percentCharged": 52, "timestamp": "2024-04-17T04:05:13"}
+{"index": {"_index": "device_status_202404", "_id": 75}}
+{"deviceId": "194", "isCharging": false, "percentCharged": 60, "timestamp": "2024-04-17T09:09:30"}
+{"index": {"_index": "device_status_202404", "_id": 76}}
+{"deviceId": "123", "isCharging": false, "percentCharged": 99, "timestamp": "2024-04-17T22:58:00"}
+{"index": {"_index": "device_status_202404", "_id": 77}}
+{"deviceId": "85", "isCharging": true, "percentCharged": 91, "timestamp": "2024-04-17T13:09:32"}
+{"index": {"_index": "device_status_202404", "_id": 78}}
+{"deviceId": "995", "isCharging": false, "percentCharged": 6, "timestamp": "2024-04-17T01:24:54"}
+{"index": {"_index": "device_status_202404", "_id": 79}}
+{"deviceId": "575", "isCharging": true, "percentCharged": 34, "timestamp": "2024-04-17T10:35:34"}
+{"index": {"_index": "device_status_202404", "_id": 80}}
+{"deviceId": "574", "isCharging": true, "percentCharged": 7, "timestamp": "2024-04-17T16:41:50"}
+{"index": {"_index": "device_status_202404", "_id": 81}}
+{"deviceId": "296", "isCharging": true, "percentCharged": 83, "timestamp": "2024-04-17T08:27:11"}
+{"index": {"_index": "device_status_202404", "_id": 82}}
+{"deviceId": "748", "isCharging": true, "percentCharged": 20, "timestamp": "2024-04-17T23:33:35"}
+{"index": {"_index": "device_status_202404", "_id": 83}}
+{"deviceId": "108", "isCharging": true, "percentCharged": 29, "timestamp": "2024-04-17T19:27:27"}
+{"index": {"_index": "device_status_202404", "_id": 84}}
+{"deviceId": "368", "isCharging": false, "percentCharged": 67, "timestamp": "2024-04-17T14:35:27"}
+{"index": {"_index": "device_status_202404", "_id": 85}}
+{"deviceId": "759", "isCharging": true, "percentCharged": 66, "timestamp": "2024-04-17T08:39:52"}
+{"index": {"_index": "device_status_202404", "_id": 86}}
+{"deviceId": "336", "isCharging": true, "percentCharged": 53, "timestamp": "2024-04-17T19:53:51"}
+{"index": {"_index": "device_status_202404", "_id": 87}}
+{"deviceId": "382", "isCharging": false, "percentCharged": 74, "timestamp": "2024-04-17T06:41:03"}
+{"index": {"_index": "device_status_202404", "_id": 88}}
+{"deviceId": "612", "isCharging": false, "percentCharged": 99, "timestamp": "2024-04-17T19:09:59"}
+{"index": {"_index": "device_status_202404", "_id": 89}}
+{"deviceId": "405", "isCharging": true, "percentCharged": 6, "timestamp": "2024-04-17T06:32:57"}
+{"index": {"_index": "device_status_202404", "_id": 90}}
+{"deviceId": "873", "isCharging": false, "percentCharged": 29, "timestamp": "2024-04-17T16:34:22"}
+{"index": {"_index": "device_status_202404", "_id": 91}}
+{"deviceId": "285", "isCharging": true, "percentCharged": 91, "timestamp": "2024-04-17T06:42:58"}
+{"index": {"_index": "device_status_202404", "_id": 92}}
+{"deviceId": "140", "isCharging": true, "percentCharged": 61, "timestamp": "2024-04-17T01:49:57"}
+{"index": {"_index": "device_status_202404", "_id": 93}}
+{"deviceId": "551", "isCharging": true, "percentCharged": 23, "timestamp": "2024-04-17T08:44:35"}
+{"index": {"_index": "device_status_202404", "_id": 94}}
+{"deviceId": "644", "isCharging": true, "percentCharged": 58, "timestamp": "2024-04-17T04:30:46"}
+{"index": {"_index": "device_status_202404", "_id": 95}}
+{"deviceId": "604", "isCharging": true, "percentCharged": 19, "timestamp": "2024-04-17T14:46:35"}
+{"index": {"_index": "device_status_202404", "_id": 96}}
+{"deviceId": "908", "isCharging": true, "percentCharged": 69, "timestamp": "2024-04-17T13:25:40"}
+{"index": {"_index": "device_status_202404", "_id": 97}}
+{"deviceId": "811", "isCharging": false, "percentCharged": 22, "timestamp": "2024-04-17T16:49:53"}
+{"index": {"_index": "device_status_202404", "_id": 98}}
+{"deviceId": "67", "isCharging": true, "percentCharged": 42, "timestamp": "2024-04-17T05:21:58"}
+{"index": {"_index": "device_status_202404", "_id": 99}}
+{"deviceId": "516", "isCharging": false, "percentCharged": 43, "timestamp": "2024-04-17T08:46:26"}

@@ -8,7 +8,7 @@ def generate_status():
         "deviceId": str(random.randint(0, 1000)),
         "isCharging": random.choice([True, False]),
         "percentCharged": random.randint(0, 100),
-        "timestamp": datetime(year=2024, month=4, day=random.randint(1, 2), 
+        "timestamp": datetime(year=2024, month=4, day=17, 
                               hour=random.randint(0, 23), minute=random.randint(0, 59), 
                               second=random.randint(0, 59)).strftime('%Y-%m-%dT%H:%M:%S')
     }
@@ -31,5 +31,5 @@ def generate_bulk_request(num_requests, outputJson):
 
 # Modifier les paramètres
 if __name__ == "__main__":
-    num_requests = 2000 
-    generate_bulk_request(num_requests, "device_status.json")
+    num_requests = 100 
+    generate_bulk_request(num_requests, "status.json")
